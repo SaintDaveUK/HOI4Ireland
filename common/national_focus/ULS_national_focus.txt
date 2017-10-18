@@ -1,0 +1,1885 @@
+focus_tree = {
+	id = ulster_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ULS
+		}
+	}
+	
+	default = no
+	
+	focus = {
+		id = ULS_stormont_parliament
+		icon = GFX_focus_generic_self_management
+
+		x = 5
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = ULS_civil_war
+		icon = GFX_focus_generic_self_management
+
+		x = 0
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ULS_civilwar_player_neutrality_effect = yes
+		}
+	}
+	
+	focus = {
+		id = ULS_secular_state
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_stormont_parliament
+		prerequisite = { focus = ULS_stormont_parliament }
+		mutually_exclusive = { focus = ULS_protestant_state	}
+		
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+		
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = ulster.101 }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_protestant_state
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_stormont_parliament
+		prerequisite = { focus = ULS_stormont_parliament }
+		mutually_exclusive = { focus = ULS_secular_state	}
+		
+		x = 2
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = ulster.100 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_catholic_appeasement
+		icon = GFX_goal_generic_improve_relations
+		relative_position_id = ULS_secular_state
+		prerequisite = { focus = ULS_secular_state }
+		mutually_exclusive = {
+			focus = ULS_reaffirm_partition
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		}
+		
+	}
+	
+	focus = {
+		id = ULS_power_transfer
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_catholic_appeasement
+		prerequisite = { focus = ULS_catholic_appeasement }
+		mutually_exclusive = {
+			focus = ULS_declaration_of_unity
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+		
+		bypass = {
+			is_subject_of = IRE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		available = {
+			IRE = {
+				is_subject_of = ENG
+				compare_autonomy_state > autonomy_puppet
+			}
+			ULS = {
+				is_subject_of = ENG
+				compare_autonomy_state > autonomy_integrated_puppet
+			}
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_autonomy = {
+					target = ULS
+					autonomy_state = autonomy_free
+				}			
+			}
+			drop_cosmetic_tag = yes
+			IRE = { puppet = ULS }
+			
+			hidden_effect = {
+				news_event = { id = ulster.10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_catholic_representation
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_catholic_appeasement
+		prerequisite = { focus = ULS_catholic_appeasement }
+		mutually_exclusive = {
+			focus = ULS_power_transfer
+		}
+		
+		bypass = {
+			is_subject_of = IRE
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = IRE
+				}
+				add_core_of = ROOT
+			}
+			
+			add_popularity = { ideology = fascism popularity = 0.2 } 
+			add_popularity = { ideology = neutrality popularity = -0.2 } 
+			
+		}
+	}
+	
+	focus = {
+		id = ULS_declaration_of_unity
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_catholic_representation
+		prerequisite = { focus = ULS_catholic_representation }
+		#mutually_exclusive = {
+		#	focus = ULS_power_transfer
+		#}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+		
+		bypass = {
+			is_subject_of = IRE
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject_of = ENG
+				}
+				every_owned_state = { add_core_of = ENG }
+			}
+		
+			hidden_effect = {
+				set_autonomy = {
+					target = ULS
+					autonomy_state = autonomy_free
+				}			
+			}
+			drop_cosmetic_tag = yes
+			IRE = { puppet = ULS }
+			
+		}
+	}
+	
+	focus = {
+		id = ULS_province_of_ulster
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_power_transfer
+		prerequisite = { focus = ULS_power_transfer focus = ULS_catholic_representation}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		
+		available = {
+			is_subject_of = IRE
+			IRE = {
+				AND = {
+					has_full_control_of_state = 744
+					owns_state = 744
+				}
+			}			
+		}
+		
+		
+		bypass = {
+			744 = { is_owned_by = ULS }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					IRE = {
+						has_full_control_of_state = 744
+						owns_state = 744
+					}
+				}
+				set_state_owner = 744
+			}
+			add_autonomy_ratio = {
+				value = -0.25
+				localization = ULS_province_of_ulster
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_united_ireland
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = ULS_province_of_ulster
+		prerequisite = { focus = ULS_province_of_ulster}
+		
+		
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_protestant_fanatics_trigger = yes 
+			}
+		}
+				
+		available = {
+			is_subject_of = IRE
+			has_autonomy_state = autonomy_integrated_puppet
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				news_event = { id = ulster.11 }
+			}
+			
+			IRE = {
+				add_named_threat = { threat = -2 name = "peacefully reunited" }
+				if = {
+					limit = { is_ai = yes }
+					
+					change_tag_from = ULS
+					annex_country = { target = ULS transfer_troops = yes }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_gerrymandering
+		icon = GFX_goal_generic_trade
+		relative_position_id = ULS_protestant_state
+		prerequisite = { focus = ULS_protestant_state }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			add_popularity = { ideology = neutrality popularity = -0.2 } 
+			
+		}
+	}
+	
+	focus = {
+		id = ULS_orange_order
+		icon = GFX_focus_generic_home_defense
+		relative_position_id = ULS_gerrymandering
+		prerequisite = { focus = ULS_gerrymandering }
+		mutually_exclusive = {
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_ulster_third_way
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_orange_order
+		prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+			focus = ULS_british_heritage
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 4
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				ULS_james_craig_is_gaga_trigger = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = fascist_influence
+			
+			add_named_threat = { threat = 1 name = "Protestant Extremism" }
+			
+			add_autonomy_ratio = {
+				value = 0.1
+				localization = ULS_ulster_third_way
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_british_heritage
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		relative_position_id = ULS_orange_order
+		prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+			focus = ULS_ulster_third_way
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = democratic_influence
+		}
+	}
+	
+	focus = {
+		id = ULS_stand_by_britain
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		relative_position_id = ULS_british_heritage
+		prerequisite = { focus = ULS_british_heritage }
+		mutually_exclusive = {
+		}
+		
+		bypass = {
+			is_in_faction_with = ENG
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = { add_to_faction = ROOT }
+		}
+	}
+	
+
+	
+	focus = {
+		id = ULS_for_god_and_ulster
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_ulster_third_way
+		prerequisite = { 
+			focus = ULS_ulster_third_way
+		}
+		
+		bypass = {
+			744 = { is_claimed_by = ULS }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		completion_reward = {
+			744 = { add_claim_by = ULS }
+			add_named_threat = { threat = 1 name = "claimed the Ulster Borders" }
+			add_autonomy_ratio = {
+				value = 0.25
+				localization = ULS_for_god_and_ulster
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_sever_tires
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = ULS_for_god_and_ulster
+		prerequisite = { focus = ULS_for_god_and_ulster }
+		mutually_exclusive = {
+		}
+		
+		bypass = {
+			NOT = { is_subject_of = ENG }
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_autonomy = {
+				target = ULS
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_german_alliance
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = ULS_sever_tires
+		prerequisite = { focus = ULS_sever_tires }
+		mutually_exclusive = {
+			focus = ULS_protestant_league
+		}
+		
+		bypass = {
+			#NOT = { is_subject_of = ENG }
+		}
+		
+		x = -1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ULS_protestant_league
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = ULS_sever_tires
+		prerequisite = { focus = ULS_sever_tires }
+		mutually_exclusive = {
+			focus = ULS_german_alliance
+		}
+		
+		bypass = {
+			#NOT = { is_subject_of = ENG }
+		}
+		
+		x = 1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			set_rule = { can_create_factions = yes }
+			create_faction = "Protestant League"
+			
+			news_event = { id = ulster.170 }
+			
+			#every_country = {
+			#	limit = { ULS_protestant_trigger = yes }
+			#	ULS = {
+			#		add_to_faction = PREV
+			#	}
+			#}
+			#
+			#every_country = {
+			#	limit = { ULS_protestant_trigger = no }
+			#	ULS = {
+			#		add_to_faction = PREV
+			#	}
+			#}
+		}
+	}
+	
+	focus = {
+		id = ULS_kingdom_of_ireland
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_ulster_third_way
+		prerequisite = { 
+			focus = ULS_ulster_third_way
+			focus = ULS_british_heritage
+		}
+		
+		
+		
+		available = {
+			#OR = {
+			#	IRE = { exists = no }
+			#	AND = {
+			#		113 = { is_owned_by = ROOT }
+			#		119 = { is_owned_by = ROOT }
+			#		134 = { is_owned_by = ROOT }
+			#		135 = { is_owned_by = ROOT }
+			#	}
+			#}
+			
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = ULS_koi
+			custom_effect_tooltip = "Cosmetic tag change."
+		}
+	}
+	
+	focus = {
+		id = ULS_claim_ireland
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_kingdom_of_ireland
+		prerequisite = { 
+			focus = ULS_kingdom_of_ireland
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+			113 = { is_claimed_by = ROOT }
+			119 = { is_claimed_by = ROOT }
+			134 = { is_claimed_by = ROOT }
+			135 = { is_claimed_by = ROOT }
+			743 = { is_claimed_by = ROOT }
+			744 = { is_claimed_by = ROOT }
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {			
+			113 = { add_claim_by = ROOT }
+			119 = { add_claim_by = ROOT }
+			134 = { add_claim_by = ROOT }
+			135 = { add_claim_by = ROOT }
+			743 = { add_claim_by = ROOT }
+			744 = { add_claim_by = ROOT }
+		}
+	}
+	
+	focus = {
+		id = ULS_war_for_ireland
+		icon = ULS_claim_ireland
+		relative_position_id = ULS_claim_ireland
+		prerequisite = { 
+			focus = ULS_claim_ireland
+		}
+		
+		available = {
+			IRE = {
+				OR = {
+					exists = yes
+					NOT = { is_in_faction_with = ROOT }
+				}
+				OR = {
+					owns_state = 113
+					owns_state = 119
+					owns_state = 134
+					owns_state = 135
+					owns_state = 743
+					owns_state = 744
+				}
+			}
+		}
+		
+		bypass = {
+			has_full_control_of_state = 113
+			has_full_control_of_state = 119
+			has_full_control_of_state = 134
+			has_full_control_of_state = 135
+			has_full_control_of_state = 743
+			has_full_control_of_state = 744
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = IRE
+				generator = { 113 119 134 135 743 744} 
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = ULS_flax_farming
+		icon = GFX_goal_generic_support_fascism
+		#relative_position_id = ULS_orange_order
+		#prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+		}
+		
+		x = 16
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#consumer_goods_factor = 0.1
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_dig_for_victory
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_flax_farming
+		prerequisite = { focus = ULS_flax_farming }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#consumer_goods_factor = 0.1
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_industry_focus
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_flax_farming
+		#prerequisite = { focus = ULS_orange_order }
+		mutually_exclusive = {
+		}
+		
+		x = 2
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#consumer_goods_factor = -0.1
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_arms_industry
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_industry_focus
+		prerequisite = { focus = ULS_industry_focus }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#consumer_goods_factor = -0.1
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_german_investors
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = ULS_dig_for_victory
+		prerequisite = { focus = ULS_dig_for_victory focus = ULS_arms_industry }
+		mutually_exclusive = {
+			focus = ULS_british_investors
+			focus = ULS_irish_investors
+		}
+		
+		available = {
+			GER = { exists = yes }
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				AND = {
+					has_government = fascism
+					GER = { has_government = fascism }				
+				}
+			}
+		}
+		
+		x = 1
+		y = 1
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				if = {
+					limit = {
+						is_subject_of = GER
+					}
+					add_autonomy_ratio = {
+						value = -0.25
+						localization = ULS_german_investors
+					}
+				}
+				if = {
+					limit = {
+						NOT = { is_subject_of = GER }
+					}
+					add_autonomy_ratio = {
+						value = 0.25
+						localization = ULS_german_investors
+					}
+				}
+			}
+			
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_irish_investors
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = ULS_german_investors
+		prerequisite = { focus = ULS_dig_for_victory }
+		mutually_exclusive = {
+			focus = ULS_german_investors
+			focus = ULS_british_investors
+		}
+		
+		x = -2
+		y = 0
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		available = {
+			IRE = { exists = yes }
+			NOT = {
+				has_war_with = IRE
+			}
+		}
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				ULS_republican_fanatics_trigger = yes
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = ULS_secular_state
+			}
+			modifier = {
+				factor = 0.01
+				ULS_protestant_fanatics_trigger = yes
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				if = {
+					limit = {
+						is_subject_of = IRE
+					}
+					add_autonomy_ratio = {
+						value = -0.25
+						localization = ULS_irish_investors
+					}
+				}
+				if = {
+					limit = {
+						NOT = { is_subject_of = IRE }
+					}
+					add_autonomy_ratio = {
+						value = 0.25
+						localization = ULS_irish_investors
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_british_investors
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = ULS_german_investors
+		prerequisite = { focus = ULS_arms_industry }
+		mutually_exclusive = {
+			focus = ULS_german_investors
+			focus = ULS_irish_investors
+		}
+		
+		x = 2
+		y = 0
+		cost = 10
+		
+		available = {
+			ENG = { exists = yes }
+			NOT = {
+				has_war_with = ENG
+			}
+		}
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.01
+				ULS_republican_fanatics_trigger = yes
+			}
+   			modifier = {
+				factor = 0.01
+				has_government = fascism
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = ULS_protestant_state
+			}
+			modifier = {
+				factor = 0.1
+				has_completed_focus = ULS_ulster_third_way
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = ULS_british_arms
+			}
+			modifier = {
+				factor = 0.1
+				has_completed_focus = ULS_ulster_arms
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				if = {
+					limit = {
+						is_subject_of = ENG
+					}
+					add_autonomy_ratio = {
+						value = -0.25
+						localization = ULS_british_investors
+					}
+				}
+				if = {
+					limit = {
+						NOT = { is_subject_of = ENG }
+					}
+					add_autonomy_ratio = {
+						value = 0.25
+						localization = ULS_british_investors
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_develop_docklands
+		icon = ULS_goal_generic_construct_infrastructure
+		relative_position_id = ULS_german_investors
+		prerequisite = { focus = ULS_british_investors focus = ULS_irish_investors focus = ULS_german_investors }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = ULS_end_unemployment_crisis
+		icon = ULS_working_sunday_focus
+		relative_position_id = ULS_develop_docklands
+		prerequisite = { focus = ULS_develop_docklands }
+		mutually_exclusive = {
+		}
+		available = {
+			num_of_factories > 12
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = ULS_unemployment_crisis
+		}
+	}
+	
+	focus = {
+		id = ULS_half_at_war
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_end_unemployment_crisis
+		prerequisite = { 
+			focus = ULS_end_unemployment_crisis
+		}
+		
+		bypass = {
+			is_subject = no
+		}
+		
+		available = {
+			threat > 0.9
+		}
+		
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						has_government = neutrality
+						NOT = { is_subject_of = IRE }
+					}
+					has_government = fascism
+				}
+			}
+		}
+		
+		mutually_exclusive = {
+			focus = ULS_war_commitment
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+			set_rule = { can_decline_call_to_war = yes }
+			add_autonomy_ratio = {
+				value = 0.2
+				localization = ULS_half_at_war
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_war_commitment
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ULS_end_unemployment_crisis
+		prerequisite = { 
+			focus = ULS_end_unemployment_crisis
+		}
+		
+		available = {
+			threat > 0.9
+		}
+		
+		mutually_exclusive = {
+			focus = ULS_half_at_war
+		}
+		
+		bypass = {
+			is_subject = no
+		}
+		
+		x = 1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+		
+			hidden_effect = {
+				news_event = { id = ulster.102 }
+			}
+		
+		
+			set_rule = { can_decline_call_to_war = no }
+			add_autonomy_ratio = {
+				value = -0.2
+				localization = ULS_war_drive
+			}
+			random_owned_controlled_state = {
+				prioritize = { 743 } # derry
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 119 } # belfast
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_belfast_shipbuilding
+		icon = GFX_goal_generic_defence
+		relative_position_id = ULS_half_at_war
+		prerequisite = { focus = ULS_war_commitment focus = ULS_half_at_war }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.1
+				ULS_republican_fanatics_trigger = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			119 = { # belfast state
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 119 # belfast city
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_belfast_defences
+		icon = GFX_goal_generic_defence
+		relative_position_id = ULS_belfast_shipbuilding
+		prerequisite = { focus = ULS_belfast_shipbuilding }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.1
+				ULS_republican_fanatics_trigger = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			119 = { # belfast state
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 119 # belfast city
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_lisahally_dockyard
+		icon = GFX_goal_generic_defence
+		relative_position_id = ULS_war_commitment
+		prerequisite = { focus = ULS_war_commitment focus = ULS_half_at_war }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.1
+				ULS_protestant_fanatics_trigger = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			743 = { # derry state
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 276 # derry city
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_derry_defences
+		icon = GFX_goal_generic_defence
+		relative_position_id = ULS_lisahally_dockyard
+		prerequisite = { focus = ULS_lisahally_dockyard }
+		mutually_exclusive = {
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.1
+				ULS_protestant_fanatics_trigger = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			743 = { # derry state
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 276 # derry city
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = ULS_queens_university
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_belfast_defences
+		prerequisite = { focus = ULS_belfast_defences
+		focus = ULS_derry_defences}
+		mutually_exclusive = {
+		}
+		
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 75
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#focus = {
+	#	id = ULS_working_sunday_focus
+	#	icon = GFX_goal_generic_support_fascism
+	#	relative_position_id = ULS_secular_state
+	#	prerequisite = { focus = ULS_secular_state }
+	#	
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	#ai_will_do = {
+	#	#	factor = 1
+	#	#}
+    #
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+    #
+	#	completion_reward = {
+	#		add_ideas = ULS_working_sunday_idea
+	#	}
+	#}
+	
+	focus = {
+		id = ULS_royal_ulster_constabulary
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = ULS_flax_farming
+		prerequisite = { }
+		mutually_exclusive = {
+		}
+		
+		x = 8
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#xp boost
+		}
+	}
+	
+	focus = {
+		id = ULS_ulster_arms
+		icon = GFX_goal_generic_small_arms
+		relative_position_id = ULS_royal_ulster_constabulary
+		prerequisite = { focus = ULS_royal_ulster_constabulary}
+		mutually_exclusive = {
+			focus = ULS_british_arms
+		}
+		
+		x = -1
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			#research bonus
+			add_autonomy_ratio = {
+				value = -0.2
+				localization = ULS_ulster_arms
+			}
+			
+			add_tech_bonus = {
+				name = ULS_ulster_arms
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = ULS_british_arms
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		relative_position_id = ULS_royal_ulster_constabulary
+		prerequisite = { focus = ULS_royal_ulster_constabulary}
+		mutually_exclusive = {
+			focus = ULS_ulster_arms
+		}
+		
+		available = {
+			is_subject_of = ENG
+			ENG = {
+				has_equipment = {
+					infantry_equipment > 499
+				}
+			}
+		}
+		
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 0.01
+				ULS_republican_fanatics_trigger = yes
+			}
+   			modifier = {
+				factor = 0.01
+				has_government = fascism
+				ENG = { NOT = { has_government = fascism } }
+			}
+			modifier = {
+				factor = 0.1
+				has_completed_focus = ULS_secular_state
+			}
+			modifier = {
+				factor = 0.1
+				has_completed_focus = ULS_ulster_third_way
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = ULS_british_investors
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_autonomy_ratio = {
+				value = -0.2
+				localization = ULS_british_arms
+			}
+			ENG = {
+				send_equipment = {
+					target = ROOT
+					type = infantry_equipment
+					amount = 500
+				}
+				
+				create_production_license = {
+					target = ROOT 
+					equipment = {
+						type = infantry_equipment_1
+					}
+					cost_factor = 0
+				}
+			}
+		}
+		
+	}
+
+	
+	focus = {
+		id = ULS_ulster_defence_volunteers
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_british_arms
+		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
+		mutually_exclusive = {
+			focus = ULS_conscription
+		}
+		
+		bypass = {
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				## UK tried really hard to stop conscription against the wishes of the Ulster gov
+				overlord = { has_government = democratic }
+				ULS_james_craig_is_gaga_trigger = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = volunteer_only
+		}
+	}
+	
+	focus = {
+		id = ULS_conscription
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_british_arms
+		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
+		mutually_exclusive = {
+			focus = ULS_ulster_defence_volunteers
+		}
+		
+		available = {
+			OR = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+			OR = {
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				has_government = fascism
+			}
+			modifier = {
+				# "gaga" James Craig would have really pushed for conscription!
+				ULS_james_craig_is_gaga_trigger = yes
+				factor = 100
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_conscription
+			
+			add_popularity = { ideology = neutrality popularity = 0.2 } 
+		}
+	}
+}

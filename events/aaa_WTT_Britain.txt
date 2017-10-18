@@ -1,0 +1,72 @@
+﻿add_namespace = wtt_britain 
+
+#IRE gets choice; trade northern ireland in return for joining the alliance?
+country_event = {
+	id = wtt_britain.24
+	title = wtt_britain.24.t
+	desc = wtt_britain.24.d
+	picture = GFX_report_event_indian_soldiers #todo
+
+	is_triggered_only = yes
+	
+	#accept
+	option = {
+		ai_chance = {
+			factor = 80
+			modifier = {
+				has_government = fascism
+				factor = 0
+			}
+		}
+		name = wtt_britain.24.a
+		
+		############original
+		#IRE = { transfer_state = 119 }
+		#################
+		
+		
+		
+		###########changed
+		IRE = { puppet = ULS }
+		####################
+		
+		
+		ENG = { add_to_faction = IRE }
+		ENG = { country_event = { id = wtt_britain.28 } }
+	}
+	#decline
+	option = {
+		name = wtt_britain.24.b
+		ENG = { country_event = { id = wtt_britain.29 } }
+	}
+}
+
+#MacDonald Proposal - Ireland Accepts
+country_event = {
+	id = wtt_britain.28
+	title = wtt_britain.28.t
+	desc = wtt_britain.28.d
+	picture = GFX_report_event_indian_soldiers #todo
+
+	is_triggered_only = yes
+	
+	#excellent
+	option = {
+		name = excellent
+	}
+}
+
+#MacDonald Proposal - Ireland Rejects Offer
+country_event = {
+	id = wtt_britain.29
+	title = wtt_britain.29.t
+	desc = wtt_britain.29.d
+	picture = GFX_report_event_indian_soldiers #todo
+
+	is_triggered_only = yes
+	
+	#Damn
+	option = {
+		name = wtt_britain.29.a
+	}
+}

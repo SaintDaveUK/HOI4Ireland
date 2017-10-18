@@ -1,0 +1,75 @@
+﻿l_english:
+ 
+ ## POWER TRANSFER ##
+ ulster.10.t:0 "[ULS.GetAdjective] Power Transfer"
+ ulster.10.d:0 "[ENG.GetNameDef] has agreed to transfer most of it's sovereign authority over the [ULS.GetAdjective] parliament to [IRE.GetNameDef]. [IRE.GetLeader] claims this agreement marks one of the first major steps towards reunification since the island was partitioned in 1921. [ENG.GetLeader] has played down the significance of the agreement, citing [IRE.GetNameDef]'s continued status as a [ENG.GetAdjective] subject."
+ 
+ ## REUNIFICATION ##
+ ulster.11.t:0 "Irish Reunification"
+ ulster.11.d:0 "Celebrations erupt up and down the island as the [ULS.GetAdjective] parliament passed the final vote to formally reunite with [IRE.GetNameDef]. The partition has officially been lifted, and Irish citizens look excitedly towards a united future."
+ 
+ ## JAMES CRAIG DYING RUMOURS ##
+ ulster.19.t:0 "Rumours of the Prime Minister's health!"
+ ulster.19.d:0 "[Root.GetLeader]'s health has been called into question as he approaches his second decade as Prime Minister of [Root.GetNameDef].\n\nSir Wilfred Spender has confided to journalists that Craig has become a leader whom "true friends would advise to retire" for he is "too unwell to carry on". Furthermore, he accused the prime minister of being incapable of doing more than one hour's constructive work in a day.\n\nLady Londonderry, an influential society hostess, was more forthright; she has described Craig as "ga-ga".\n\nThe prime minister made an effort to address the Stormont Parliament where he personally rubbished the claims, before quickly retiring to his house in Craigavon. It appears he intends to continue without resignation."
+ ulster.19.a:0 "Is he fit to lead?"
+ 
+ ## JAMES CRAIG DEAD ##
+ ulster.20.t:0 "James Craig Dead!"
+ ulster.20.d:0 "The prime minister has been found dead his home at Glencraig, County Down.\n\nHe was found by his wife shortly after settling down to listen to the radio, a pipe still smoking in his mouth.\n\nWe must hastily find a successor to the very father of [Root.GetAdjective] politics!"
+ ulster.20.a:0 "The Minister of Finance will do."
+ ulster.20.b:0 "Minister of Agriculture, Sir Basil Brooke"
+ 
+ ulster.21.t:0 "[From.GetAdjective] Prime Minister Dies!"
+ ulster.21.d:0 "James Craig, Viscount Craigavon, has died in his home.\n\nCraig led the Parliament of [From.GetNameDef] from its creation in 1921. A bluff and strong-minded imperialist, he was known as the “strong man of Ulster”.\n\nHe has been succeeded by [From.GetLeader], at least until the next election."
+ 
+ ## JOHN M. ANDREWS CRISIS 
+ ulster.23.t:0 "Backbench Revolt"
+ ulster.23.d:0 "Following a secret meeting, backbenchers of the ruling party have forwarded a letter of demands to the Chief Whip. Discontent with [Root.GetLeader] and the 'old guard', and concerned by the drop in public confidence in the [Root.GetAdjective] government, they demand both a change of leadership and the immediate appointment of younger ministers to the cabinet.\n\n[Root.GetLeader] is regarded as the source of the administration's ineffectiveness, and his continuation in office as a threat to the preservation of law and order!"
+ ulster.23.a:0 "It is safer to maintain status quo."
+ ulster.23.b:0 "We should find a replacement to diffuse the crisis!"
+ 
+ #Andrews leaves, Brooke takes charge
+ ulster.25.t:0 "[From.GetAdjective] Prime Minister Resigns!"
+ ulster.25.d:0 "John M. Andrews has announced his resignation from the premiership of [From.GetNameDef], in the face of backbench dissent within the Ulster Unionist Party. Cabinet member [From.GetLeader] has agreed to take his place as the new prime minister."
+ 
+ 
+ #Opening Message
+ ulster.100.t:0 "A Protestant State"
+ ulster.100.d:0 "Prime Minister [From.GetLeader] of [From.GetNameDef] today announced in Parliament his commitment to a government that is 'absolutely fair' towards all Protestant citizens of [From.GetNameDef].\n\n“In the South they boasted of a Catholic State. They still boast of Southern Ireland being a Catholic State. All I boast of is that we are a Protestant Parliament and a Protestant State. It would be rather interesting for historians of the future to compare a Catholic State launched in the South with a Protestant State launched in the North and to see which gets on the better and prospers the more.\n\n“It is most interesting for me at the moment to watch how they are progressing. I am doing my best always to top the bill and to be ahead of the South.”\n\nThe move towards a more militant government in Northern Ireland drew a mixture of applause and anger from both sides of the [From.GetAdjective] Question."
+ 
+  #Opening Message
+ ulster.101.t:0 "A Secular State"
+ ulster.101.d:0 "Prime Minister [From.GetLeader] of [From.GetNameDef] today announced in Parliament his commitment to a government that is 'absolutely fair' towards all the citizens of [From.GetNameDef].\n\n'I, myself, laid down the principle, to which I still adhere, that I was Prime Minister not of one section of the community but of all, and that as far as I possibly could I was going to see that fair play was meted out to all classes and creeds without any favour whatever on my part.'\n\nThe move towards a peaceful resolution for the [From.GetAdjective] Question has been welcomed by most in the province."
+ 
+ #War Commitment
+ ulster.102.t:0 "[From.GetAdjective] War Commitment"
+ ulster.102.d:0 "Prime Minister [From.GetLeader] today announced to a troubled parliament that the loyalty of the country will remain steadfast.\n\n'[From.GetNameDef] is ready when we get the word and always will be. Soon we will be in a state of war and we are prepared with the rest of [From.Overlord.GetNameDef] to face all the responsibilities that imposes on the [From.GetAdjective] people. There is no slacking in our loyalty.'"
+ 
+ 
+ #Protestant League
+ ulster.170.t:0 "Protestant League"
+ ulster.170.desc:0 "[FROM.GetNameDef] has formed the Protestant League. In a rousing speech today, Prime Minister [FROM.GetLeader] has implored all true Protestant nations to take up the cause alongside the [FROM.GetAdjective] people!"
+ ulster.170.a:0 "We must join the struggle!"
+ ulster.170.b:0 "This is a lost cause."
+ ulster.170.c:0 "A worrying development..."
+ ulster.170.ULS:0 "A rousing speech indeed!"
+ 
+ #Opening Message
+ ulster.199.t:0 "[ULS.GetName]"
+ ulster.199.d:0 "There are dark times ahead for this island of ours.\n\n[ULS.GetNameDef] is teetering on the edge of internal conflict. Our statelet was set up just 15 years ago in the fallout of the Irish War of Independence. After the treacherous Catholics in the south tore away from [ENG.GetNameDef] to create the so-called 'Free State', us loyal [Overlord.GetAdjective] subjects of [ULS.GetNameDef] were gifted a home rule parliament under the stern rule of Prime Minister [ULS.GetLeader].\n\nAll is not rosy though. Nationalist politicians insist that the thousands of poor, unemployed Catholics should be given equal opportunities to hardworking protestants like us. [IRE.GetLeader]'s questionable rule of '[IRE.GetNameDef]' maintains its illegal claims on our rightful six counties.\n\nThe threats don't end there. Fascists within our own community claim that [Overlord.GetNameDef] - and indeed our Ulster Unionist Party - are not doing enough to subdue the Catholic threat. These 'loyalists' in the Ulster Protestant League will only be content when the Protestant Ascendancy once again rules over Ireland.\n\nOur island is about to reach a flashpoint. How will you change history?"
+ 
+ #Marching Season
+ ulster.200.t:0 "Marching Season"
+ ulster.200.d:0 "It's that time of year again."
+ 
+ #Republican Rebellion
+ ulster.201.t:0 "Republican Rebellion!"
+ ulster.201.d:0 "Republican Rebellion!"
+ ulster.201.a:0 "Join the rebels!"
+ ulster.201.b:0 "Crush the rebels!"
+ 
+ #Protestant Rebellion
+ ulster.202.t:0 "Protestant Rebellion!"
+ ulster.202.d:0 "Protestant Rebellion!"
+ ulster.202.a:0 "Join the rebels!"
+ ulster.202.b:0 "Crush the rebels!"

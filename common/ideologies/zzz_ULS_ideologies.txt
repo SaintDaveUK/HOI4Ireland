@@ -1,0 +1,14 @@
+ideologies = {
+	fascism = {
+		types = {
+		
+			ULS_anti_catholicism = { }
+		}
+	}
+	
+	neutrality = {
+		types = {
+			ULS_irish_republicanism = { }
+		}
+	}
+}

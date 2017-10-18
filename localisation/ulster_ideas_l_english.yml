@@ -1,0 +1,41 @@
+﻿l_english:
+ ULS_religious_sectarianism:0 "Religious Sectarianism"
+ ULS_religious_sectarianism_desc:0 "The province is stricken with inter-denominational strife. The Protestant ruling class is at odds with the Catholic minorities."
+ ULS_appeased_catholics:0 "Appeased Catholics"
+ ULS_appeased_catholics_desc:0 "The Protestant ruling class remains dominant, but recent compromises have given some Catholics a new hope for a better future."
+ 
+ ULS_old_guard:0 "Old Guard"
+ ULS_old_guard_desc:0 "The government has been occupied by the same stubborn old men since its creation, so it is very resistant to change."
+ 
+ ULS_unemployment_crisis:0 "Unemployment Crisis"
+ ULS_unemployment_crisis_desc:0 "As factories fail to offer secure work contracts, the unemployed are pushed to political extremism."
+ 
+ ULS_working_sunday_idea:0 "Working Sunday"
+ ULS_working_sunday_idea_desc:0 "Working Sunday"
+ 
+ ULS_marching_season:0 "Marching Season"
+ ULS_marching_season_desc:0 "Marching Season"
+ 
+ ULS_marching_season_riots:0 "Marching Season Riots"
+ ULS_marching_season_riots_desc:0 "The regular marching season has erupted into violence, as Protestants and Catholics war on the streets."
+ 
+ ULS_medium_aircraft_manufacturer:0 "Short & Harland"
+ ULS_support_equipment_manufacturer:0 "James Mackie & Sons"
+ ULS_industrial_concern:0 "Sirocco Works"
+ ULS_infantry_equipment_manufacturer:0 "Joseph Braddell & Sons"
+ 
+ ULS_democratic_reformer:0 "William Stewart"
+ ULS_captain_of_industry:0 "Sir Basil Brooke" #Agricultural Minister, credited with kick-starting NI's economy mid-war
+ ULS_backroom_backstabber:0 "Sir Joseph Davison" #head of Orange Order
+ ULS_prince_of_terror:0 "Sir Charles Wickham" #Chief of Royal Ulster Constabulary
+ ULS_fortification_engineer:0 "John MacDermott" #non-Orangeman politician charged with NI defences
+ 
+ ULS_fascist_demagogue:0 "Dorothy Harnett"
+ ULS_fascist_demagogue_desc:0 "This protestant firebrand fears that the direction of today's politics could lead to equal rights for Catholics and other undesirables, and insists that the established privileges enjoyed by protestants must be maintained at any cost." 
+ 
+ #ULS_republican_nationalist:0 "Republican Nationalist"
+ republican_nationalist:0 "Republican Nationalist"
+ republican_nationalist_desc:0 "This politician is a militant believer in a united republic."
+ 
+ floundering_economist:0 "Floundering Economist"
+ floundering_economist_desc:0 "This statesman is particularly poor at planning for the long-term future."

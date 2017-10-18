@@ -1,0 +1,6 @@
+﻿l_english:
+ 
+ wtt_britain.24.t:0 "The MacDonald Proposal"
+ wtt_britain.24.d:0 "With the current war putting a strain on [From.GetAdjective] convoys, our Eastern neighbours have become increasingly anxious for the use of our air and naval bases, from which they hope to expand their protective coverage of their convoy routes. A [From.GetAdjective] envoy by the name of Malcolm MacDonald has now arrived to propose the return of [ULS.GetNameDef] to sovereign [Root.GetAdjective] control, in return for our immediate entry into the war on the side of the [From.GetNameDef]."
+ wtt_britain.24.a:0 "An excellent idea."
+ wtt_britain.24.b:0 "The prize is not worth the cost."

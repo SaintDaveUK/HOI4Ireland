@@ -1,0 +1,108 @@
+on_actions = {
+	on_government_change = {
+		effect = {	
+			ULS_set_derry_name_effect = yes
+		}
+	}
+
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {	
+			ULS_set_derry_name_effect = yes
+		}
+		effect = {
+			if = {
+				limit = { 
+					original_tag = ULS
+					NOT = { has_cosmetic_tag = ULS_koi }
+					#FROM = { tag = ENG }
+				} 
+				
+				drop_cosmetic_tag = yes
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { 
+					original_tag = IRE
+					#FROM = { tag = ENG }
+				} 
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_puppet = {
+		effect = {	
+			ULS_set_derry_name_effect = yes
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { original_tag = ULS }
+					FROM = { original_tag = ENG }
+					NOT = { has_cosmetic_tag = ULS_koi }
+				} 
+				set_cosmetic_tag = ULS_uk
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { original_tag = IRE }
+					FROM = { original_tag = ENG }
+				} 
+				set_cosmetic_tag = IRE_uk
+			}
+		}
+	}
+	
+	on_release_as_puppet = {
+		effect = {	
+			ULS_set_derry_name_effect = yes
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { original_tag = ULS }
+					FROM = { original_tag = ENG }
+					NOT = { has_cosmetic_tag = ULS_koi }
+				} 
+				set_cosmetic_tag = ULS_uk
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					ROOT = { original_tag = IRE }
+					FROM = { original_tag = ENG }
+				} 
+				set_cosmetic_tag = IRE_uk
+			}
+		}
+	}
+	
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 743 }
+				}
+				ULS_set_derry_name_effect = yes
+			}
+		}
+	}
+	
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { tag = ULS }
+				country_event = { id = ulster.200 days = 181 }
+				country_event = { id = ulster.199 }
+			}
+		}
+		
+	}
+}

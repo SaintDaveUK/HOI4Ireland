@@ -1,0 +1,120 @@
+#ULS_elect_craig_effect = yes
+ULS_elect_craig_effect = {
+	create_country_leader = { #uup
+		id = 99941
+		name = "James Craig"
+		desc = "POLITICS_JAMES_CRAIG_DESC"
+		picture = "Portrait_Ulster_Craig.tga"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+}
+
+#ULS_elect_andrews_effect = yes
+ULS_elect_andrews_effect = {
+	create_country_leader = {
+		id = 99942
+		name = "John M. Andrews"
+		desc = "POLITICS_JOHN_ANDREWS_DESC"
+		picture = "Portrait_Ulster_Andrews.tga"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			floundering_economist
+		}
+	}
+		
+	set_country_flag = ULS_pm_andrews
+}
+
+#ULS_elect_brooke_effect = yes
+ULS_elect_brooke_effect = {
+	create_country_leader = { #uup
+		id = 99943
+		name = "Sir Basil Brooke"
+		desc = "POLITICS_BASIL_BROOKE_DESC"
+		picture = "Portrait_Ulster_Brooke.tga"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+		}
+	}
+}
+
+#ULS_elect_londonderry_effect = yes
+ULS_elect_londonderry_effect = {
+	
+	set_party_name = { ideology = fascism long_name = "National Fascist Government" name = "Fascists" }
+	
+	create_country_leader = {
+		id = 99944
+		name = "Lord Londonderry"
+		desc = "POLITICS_LONDONDERRY_DESC"
+		picture = "Portrait_Ulster_Londonderry.tga"
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {
+		}
+	}
+}
+
+#ULS_set_derry_name_effect = yes
+ULS_set_derry_name_effect = {
+	
+	if = {
+		limit = {
+			743 = { is_controlled_by = ROOT }
+		}
+		#DERRY
+		ULS_to_derry_effect = yes #default
+		
+		#LONDONDERRY override
+		if = {
+			limit = {
+				OR = {
+					original_tag = ENG
+					AND = {
+						original_tag = ULS
+						AND = {
+							NOT = { is_subject_of = IRE }
+							NOT = { has_government = neutrality }
+						}
+					}
+				}
+			}
+			ULS_to_londonderry_effect = yes
+		}
+		
+		#FREE DERRY override
+		if = {
+			limit = {
+				has_government = neutrality
+				OR = {
+					original_tag = IRE
+					original_tag = ULS
+				}
+			}
+			ULS_to_free_derry_effect = yes
+		}
+	}
+}
+
+
+#ULS_to_derry_effect = yes
+ULS_to_derry_effect = {
+	set_province_name = { id = 276 name = "Derry" }
+}
+
+#ULS_to_londonderry_effect = yes
+ULS_to_londonderry_effect = {
+	set_province_name = { id = 276 name = "Londonderry" }
+}
+
+#ULS_to_free_derry_effect = yes
+ULS_to_free_derry_effect = {
+	set_province_name = { id = 276 name = "Free Derry" }
+}
+

@@ -1,0 +1,13 @@
+﻿l_english:
+ ULS_democratic_party:0 "Unionists" #1935: 65% Vote
+ ULS_democratic_party_long:0 "Ulster Unionist Party" 
+ ULS_fascism_party:0 "Protestants"
+ ULS_fascism_party_long:0 "Ulster Protestant League"
+ ULS_communism_party:0 "Communists"
+ ULS_communism_party_long:0 "Communist Party of Northern Ireland" 
+ ULS_neutrality_party:0 "Nationalists" #1935: 35% vote
+ ULS_neutrality_party_long:0 "Irish Nationalist Party"
+ ULS_anti_catholicism:0 "Anti-Catholicism"
+ ULS_anti_catholicism_desc:0 "An authoritarian ideology with traits of fascism and conservatism, Anti-Catholicism sees Papist values as dangerous and unfree."
+ ULS_irish_republicanism:0 "Irish Republicanism"
+ ULS_irish_republicanism_desc:0 "An authoritarian ideology which seeks to militarily reunite the island of Ireland under a sovereign Irish Republic."

@@ -1,0 +1,154 @@
+﻿## 1936 ##
+
+capital = 119
+
+oob = "ULS_1936"
+
+set_stability = 0.5
+
+set_research_slots = 2
+
+set_technology = {
+	tech_support = 1
+	tech_military_police = 1
+	infantry_weapons = 1
+	#infantry_weapons1 = 1
+}
+
+ENG = { puppet = ULS }
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	ENG = { set_autonomy = { target = ULS autonomy_state = autonomy_integrated_puppet } }
+}
+
+set_cosmetic_tag = ULS_uk
+
+
+
+
+add_opinion_modifier = { target = IRE modifier = hostile_status }
+IRE = { add_opinion_modifier = { target = ULS modifier = hostile_status } }
+
+### national spirit
+add_ideas = {
+	ULS_religious_sectarianism
+	ULS_old_guard
+	ULS_unemployment_crisis
+	disarmed_nation
+}
+###ministers
+
+add_ideas = {
+	
+}
+
+###laws
+
+add_ideas = {
+	
+}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 55 #real life 65%
+		}
+
+		fascism = {
+			popularity = 10 #taken 10 from the unionist 65%
+		}
+		
+		communism = {
+			popularity = 1
+		}
+		
+		neutrality = {
+			popularity = 35
+		}
+	}
+	
+	ruling_party = democratic
+	last_election = "1933.11.30"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+## DEMOCRATIC LEADERS ##
+
+create_country_leader = { #uup
+	id = 99941
+	name = "James Craig"
+	desc = "POLITICS_JAMES_CRAIG_DESC"
+	picture = "Portrait_Ulster_Craig.tga"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		staunch_constitutionalist
+	}
+}
+
+##remaining Democratic leaders are defined in ULS_scripted_effects.txt
+
+
+
+create_country_leader = { #nationalist party
+	name = "Thomas Joseph Campbell"
+	desc = "THOMAS_JOSEPH_CAMPBELL_DESC"
+	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = ULS_irish_republican # should really be nationalist
+	traits = {
+	}
+}
+
+#create_country_leader = { #protestant league
+#	name = "Reverend Samuel Hanna"
+#	desc = "SAMUEL_HANNA_DESC"
+#	picture = "Portrait_Ulster_Hanna.tga"
+#	expire = "1965.1.1"
+#	ideology = fascism_ideology
+#	traits = {
+#	}
+#}
+
+create_country_leader = { #protestant league
+	name = "James Hanna McCormick"
+	desc = "JAMES_HANNA_MCCORMICK"
+	picture = "Portrait_Ulster_McCormick.tga"
+	expire = "1965.1.1"
+	ideology = ULS_anti_catholicism
+	traits = {
+		great_war_hero
+	}
+}
+
+create_country_leader = { #Communist
+	name = "Sean Murray" 
+	desc = "SEAN_MURRAY_DESC"
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+create_corps_commander = {
+	name = "Sir Charles Wickham" #Commander of RUC 1922–1945
+	portrait_path = "gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
+	traits = { old_guard  }
+	skill = 3
+}
+
+#create_corps_commander = {
+#	name = "James Cooke-Collis" #Commander of British Army NI District 1935–1938
+#	portrait_path = "gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
+#	traits = {  }
+#	skill = 3
+#}
+
+## 1939 ##

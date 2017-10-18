@@ -1,0 +1,127 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ULS_loves_IRE = {
+	enable = {
+		tag = ULS
+		country_exists = IRE
+		has_completed_focus = ULS_catholic_appeasement
+	}
+	abort = {
+		NOT = { country_exists = IRE }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "IRE"			
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "IRE"			
+		value = 100
+	}	
+}
+
+IRE_loves_ULS = {
+	enable = {
+		tag = IRE
+		country_exists = ULS
+		
+		ULS = { has_completed_focus = ULS_catholic_appeasement } 
+	}
+	abort = {
+		NOT = { country_exists = ULS }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ULS"			
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ULS"			
+		value = 100
+	}	
+}
+
+nationalist_ULS_loves_IRE = {
+	enable = {
+		original_tag = ULS
+		has_government = neutrality
+	}
+	abort = {
+		NOT = { country_exists = IRE }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "IRE"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "IRE"			
+		value = 200
+	}	
+}
+
+nationalist_ULS_hates_ENG = {
+	enable = {
+		original_tag = ULS
+		has_government = neutrality
+	}
+	abort = {
+		NOT = { country_exists = ENG }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ENG"			
+		value = 200
+	}
+}
+
+ULS_hates_IRE = {
+	enable = {
+		tag = ULS
+		country_exists = IRE
+		has_completed_focus = ULS_ulster_third_way
+	}
+	abort = {
+		NOT = { country_exists = IRE }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "IRE"			
+		value = 200
+	}
+}
+
+IRE_hates_ULS = {
+	enable = {
+		tag = IRE
+		country_exists = ULS
+		ULS = { has_completed_focus = ULS_ulster_third_way }
+	}
+	abort = {
+		NOT = { country_exists = ULS }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ULS"			
+		value = 200
+	}
+}

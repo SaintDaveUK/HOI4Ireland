@@ -1,0 +1,63 @@
+spriteTypes = {	
+	
+	##IRE TANKS##
+	
+	SpriteType = {
+		name = "GFX_IRE_gwtank_medium"
+		texturefile = "gfx/interface/technologies/IRE_gw_tank.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ULS_gwtank_medium"
+		texturefile = "gfx/interface/technologies/IRE_gw_tank.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_IRE_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/IRE_basic_light_tank.png"
+	}
+	
+	##IRE INFANTRY##
+	SpriteType = {
+		name = "GFX_IRE_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ULS_infantry_equipment_0.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_IRE_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/ULS_infantry_equipment_1.tga"
+	}	
+	
+	#SpriteType = {
+	#	name = "GFX_IRE_improved_infantry_weapons_medium"
+	#	texturefile = "gfx/interface/technologies/IRE_infantry_equipment_2.tga"
+	#}
+	#
+	#SpriteType = {
+	#	name = "GFX_IRE_advanced_infantry_weapons_medium"
+	#	texturefile = "gfx/interface/technologies/IRE_infantry_equipment_3.tga"
+	#}
+	
+	SpriteType = {
+		name = "GFX_ULS_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ULS_infantry_equipment_0.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_ULS_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/ULS_infantry_equipment_1.tga"
+	}	
+	
+	#SpriteType = {
+	#	name = "GFX_ULS_improved_infantry_weapons_medium"
+	#	texturefile = "gfx/interface/technologies/IRE_infantry_equipment_2.tga"
+	#}
+	#
+	#SpriteType = {
+	#	name = "GFX_ULS_advanced_infantry_weapons_medium"
+	#	texturefile = "gfx/interface/technologies/IRE_infantry_equipment_3.tga"
+	#}	
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+state={
+	id=743
+	name="STATE_743"
+	provinces={
+		276 385 11257 
+	}
+	history={
+		owner = ULS
+		victory_points = {
+			276 2 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = IRE
+		#add_core_of = ULS #core removed to reflect division
+	}
+	
+	#manpower=1357600
+	manpower=479415 #0.4
+	
+	buildings_max_level_factor=1.000
+	state_category=town
+}
