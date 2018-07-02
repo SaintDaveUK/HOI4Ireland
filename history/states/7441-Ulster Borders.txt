@@ -1,6 +1,6 @@
 state={
-	id=744
-	name="STATE_744"
+	id=7441
+	name="STATE_7441"
 	provinces={
 		337 11303 
 	}
@@ -16,7 +16,7 @@ state={
 	}
 	
 	#manpower=1357600
-	manpower=217216 #Donegal, Cavan, Monaghan are 16% of Northern Ireland's	pop
+	manpower=217216 #Donegal, Cavan, Monaghan are 16% the size of Northern Ireland's pop
 	buildings_max_level_factor=1.000
 	
 	state_category=rural

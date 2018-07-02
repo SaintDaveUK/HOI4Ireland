@@ -313,15 +313,15 @@ focus_tree = {
 			is_subject_of = IRE
 			IRE = {
 				AND = {
-					has_full_control_of_state = 744
-					owns_state = 744
+					has_full_control_of_state = 7441
+					owns_state = 7441
 				}
 			}			
 		}
 		
 		
 		bypass = {
-			744 = { is_owned_by = ULS }
+			7441 = { is_owned_by = ULS }
 		}
 
 		cancel_if_invalid = yes
@@ -332,11 +332,11 @@ focus_tree = {
 			if = {
 				limit = {
 					IRE = {
-						has_full_control_of_state = 744
-						owns_state = 744
+						has_full_control_of_state = 7441
+						owns_state = 7441
 					}
 				}
-				set_state_owner = 744
+				set_state_owner = 7441
 			}
 			add_autonomy_ratio = {
 				value = -0.25
@@ -576,7 +576,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			744 = { is_claimed_by = ULS }
+			7441 = { is_claimed_by = ULS }
 		}
 		
 		ai_will_do = {
@@ -600,7 +600,7 @@ focus_tree = {
 		
 
 		completion_reward = {
-			744 = { add_claim_by = ULS }
+			7441 = { add_claim_by = ULS }
 			add_named_threat = { threat = 1 name = "claimed the Ulster Borders" }
 			add_autonomy_ratio = {
 				value = 0.25
@@ -776,8 +776,8 @@ focus_tree = {
 			119 = { is_claimed_by = ROOT }
 			134 = { is_claimed_by = ROOT }
 			135 = { is_claimed_by = ROOT }
-			743 = { is_claimed_by = ROOT }
-			744 = { is_claimed_by = ROOT }
+			7442 = { is_claimed_by = ROOT }
+			7441 = { is_claimed_by = ROOT }
 		}
 		
 		x = 0
@@ -800,8 +800,8 @@ focus_tree = {
 			119 = { add_claim_by = ROOT }
 			134 = { add_claim_by = ROOT }
 			135 = { add_claim_by = ROOT }
-			743 = { add_claim_by = ROOT }
-			744 = { add_claim_by = ROOT }
+			7442 = { add_claim_by = ROOT }
+			7441 = { add_claim_by = ROOT }
 		}
 	}
 	
@@ -824,8 +824,8 @@ focus_tree = {
 					owns_state = 119
 					owns_state = 134
 					owns_state = 135
-					owns_state = 743
-					owns_state = 744
+					owns_state = 7442
+					owns_state = 7441
 				}
 			}
 		}
@@ -835,8 +835,8 @@ focus_tree = {
 			has_full_control_of_state = 119
 			has_full_control_of_state = 134
 			has_full_control_of_state = 135
-			has_full_control_of_state = 743
-			has_full_control_of_state = 744
+			has_full_control_of_state = 7442
+			has_full_control_of_state = 7441
 		}
 		
 		x = 0
@@ -858,7 +858,7 @@ focus_tree = {
 			create_wargoal = {
 				type = take_state_focus
 				target = IRE
-				generator = { 113 119 134 135 743 744} 
+				generator = { 113 119 134 135 7442 7441} 
 			}
 		}
 	}
@@ -895,7 +895,7 @@ focus_tree = {
 		completion_reward = {
 			#consumer_goods_factor = 0.1
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -928,7 +928,7 @@ focus_tree = {
 		completion_reward = {
 			#consumer_goods_factor = 0.1
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1068,7 +1068,7 @@ focus_tree = {
 			}
 			
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1154,7 +1154,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1286,7 +1286,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
@@ -1422,7 +1422,7 @@ focus_tree = {
 				localization = ULS_war_drive
 			}
 			random_owned_controlled_state = {
-				prioritize = { 743 } # derry
+				prioritize = { 7442 } # derry
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1548,7 +1548,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			743 = { # derry state
+			7442 = { # derry state
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -1588,7 +1588,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			743 = { # derry state
+			7442 = { # derry state
 				add_building_construction = {
 					type = bunker
 					level = 3

@@ -1,7 +1,7 @@
 #ULS_civilwar_player_neutrality_effect = yes
 ULS_civilwar_player_neutrality_effect = {
-	set_capital = 743
-	start_civil_war = { ideology = neutrality size = 0.6 capital = 743 states = { 743 } }
+	set_capital = 7442
+	start_civil_war = { ideology = neutrality size = 0.6 capital = 7442 states = { 7442 } }
 	#hidden_effect = { 
 	#	
 	#	
@@ -9,8 +9,8 @@ ULS_civilwar_player_neutrality_effect = {
 	#	#	ruling_party = neutrality
 	#	#	#ideology = democratic
 	#	#	size = 0.5
-	#	#	capital = 743
-	#	#	states = { 743 }
+	#	#	capital = 7442
+	#	#	states = { 7442 }
 	#	#}
 	#	#random_other_country = {
 	#	#	limit = {

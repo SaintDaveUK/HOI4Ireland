@@ -55,11 +55,11 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 55 #real life 65%
+			popularity = 45 #real life 65%
 		}
 
 		fascism = {
-			popularity = 10 #taken 10 from the unionist 65%
+			popularity = 20 #taken 20 from the unionist 65%
 		}
 		
 		communism = {
@@ -100,7 +100,7 @@ create_country_leader = { #nationalist party
 	desc = "THOMAS_JOSEPH_CAMPBELL_DESC"
 	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 	expire = "1965.1.1"
-	ideology = ULS_irish_republican # should really be nationalist
+	ideology = ULS_irish_republicanism
 	traits = {
 	}
 }

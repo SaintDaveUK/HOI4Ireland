@@ -32,5 +32,12 @@
   ULS_british_arms:0 "British Imports"
 #ULS_british_arms:0 "Being the most northerly port in Ireland, the smooth operation of Lisahally is of vital strategic importance."
 
+ ULS_german_investors:0 "German Investors"
+ #ULS_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+ ULS_irish_investors:0 "Irish Investors"
+ #ULS_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+ ULS_british_investors:0 "British Investors"
+ #ULS_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+
  ULS_stand_by_britain:0 "Stand By Britain"
  ULS_stand_by_britain_desc:0 "Ulster is the key to the defence of Ireland. To make it neutral would mean handing over that key to Hitler. A neutral Ulster is impossible. We mean to stand by Britain and the empire!"

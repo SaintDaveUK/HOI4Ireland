@@ -17,7 +17,7 @@
 			Kevin Liam Michael Patrick Peter Richard Robert Séan Thomas William
 			
 			#Aristocrat
-			Lord Lord Lord Lord "Dr." "Sir David" "Sir James" "Sir Alexander" "Sir George" "Sir John" "Sir Alfred" "Sir Thomas" "Sir William" "Sir Robert"
+			Lord Lord Lord Lord "Dr." "Sir David" "Sir James" "Sir Alexander" "Sir George" "Sir John" "Sir Alfred" "Sir Thomas" "Sir William" "Sir Robert" Reverend
 			
 		 }
 	}
