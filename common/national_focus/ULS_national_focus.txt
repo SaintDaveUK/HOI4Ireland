@@ -1882,4 +1882,103 @@ focus_tree = {
 			add_popularity = { ideology = neutrality popularity = 0.2 } 
 		}
 	}
+	
+	focus = {
+		id = ULS_reestablish_anglicanism
+		icon = GFX_goal_generic_support_fascism
+		#relative_position_id = ULS_british_arms
+		prerequisite = {
+			#focus = ULS_british_arms
+		}
+		mutually_exclusive = {
+			focus = ULS_establish_presbyterianism
+		}
+		
+		available = {
+			#OR = {
+			#	has_war = yes
+			#}
+		}
+		
+		bypass = {
+			#OR = {
+			#	has_idea = limited_conscription
+			#	has_idea = extensive_conscription
+			#	has_idea = service_by_requirement
+			#	has_idea = all_adults_serve
+			#	has_idea = scraping_the_barrel
+			#}
+		}
+		
+		x = 17
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			#modifier = {
+			#	factor = 100
+			#	has_government = fascism
+			#}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_conscription
+			
+			add_popularity = { ideology = neutrality popularity = 0.2 } 
+		}
+	}
+	focus = {
+		id = ULS_establish_presbyterianism
+		icon = GFX_goal_generic_support_fascism
+		#relative_position_id = ULS_british_arms
+		prerequisite = {
+			#focus = ULS_british_arms
+		}
+		mutually_exclusive = {
+			focus = ULS_reestablish_anglicanism
+		}
+		
+		available = {
+			#OR = {
+			#	has_war = yes
+			#}
+		}
+		
+		bypass = {
+			#OR = {
+			#	has_idea = limited_conscription
+			#	has_idea = extensive_conscription
+			#	has_idea = service_by_requirement
+			#	has_idea = all_adults_serve
+			#	has_idea = scraping_the_barrel
+			#}
+		}
+		
+		x = 19
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			#modifier = {
+			#	factor = 100
+			#	has_government = fascism
+			#}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_conscription
+			
+			add_popularity = { ideology = neutrality popularity = 0.2 } 
+		}
+	}
 }
