@@ -251,7 +251,7 @@ bookmarks = {
 		
 		"ULS"={
 			minor = yes
-			#history = "ULS_GATHERING_STORM_DESC"
+			history = "ULS_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
 				ULS_religious_sectarianism
