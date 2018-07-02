@@ -470,6 +470,8 @@ country_event = {
 				1 = { country_event = { id = ulster.202 days = 11 } } ## republican civil war
 				1 = { country_event = { id = ulster.203 days = 11 } } ## protestant civil war
 				1 = { country_event = { id = ulster.204 days = 11 } } ## riots
+				1 = { country_event = { id = ulster.205 days = 11 } } ## riots damage a factory
+				1 = { country_event = { id = ulster.206 days = 11 } } ## riots damage a factory
 				10 = { }
 				
 			}
@@ -582,6 +584,66 @@ country_event = {
 		effect_tooltip = {
 			add_timed_idea = { idea = ULS_marching_season_riots days = 11 }	
 		}
+	}
+}
+
+## arms factory damaged
+country_event = {
+	id = ulster.205
+	title =  ulster.205.t
+	desc = ulster.205.d
+	picture = report_event_spain_civil_war_soldiers
+	
+	#major = yes
+		
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "Oh dear."
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.5
+			}
+		}
+		
+	}
+}
+
+## civilian factory damaged
+country_event = {
+	id = ulster.206
+	title =  ulster.206.t
+	desc = ulster.206.d
+	picture = report_event_spain_civil_war_soldiers
+	
+	#major = yes
+		
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "Oh dear."
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.5
+			}
+		}
+		
 	}
 }
 
