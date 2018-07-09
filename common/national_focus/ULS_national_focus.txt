@@ -637,6 +637,10 @@ focus_tree = {
 				target = ULS
 				autonomy_state = autonomy_free
 			}
+			if = {
+				limit = { has_cosmetic_tag = ULS_uk }
+				drop_cosmetic_tag = yes
+			}
 		}
 	}
 	
