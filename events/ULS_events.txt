@@ -455,7 +455,7 @@ country_event = {
 	id = ulster.200
 	title =  ulster.200.t
 	desc = ulster.200.d
-	picture = report_event_american_hunger_march
+	picture = report_event_ULS_orange_parade
 	
 	#major = yes
 		
@@ -514,14 +514,18 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		set_capital = 119
 		start_civil_war = {
-				ideology = neutrality
-				size = 0.5
-				capital = 26
-				states_filter = {
-					is_core_of = IRE			
-				}
+			ruling_party = fascism
+			ideology = neutrality
+			size = 0.5
+			only_own_territory = no
+			capital = 786
+			states = all
+			states_filter = {
+				is_core_of = IRE
 			}
+		}
 	}
 	
 	option = {
@@ -551,6 +555,20 @@ country_event = {
 			#states_filter = {
 			#	is_core_of = ULS			
 			#}
+		}
+	}
+	immediate = {
+		set_capital = 119
+		start_civil_war = {
+			#ruling_party = fascism
+			ideology = fascism
+			size = 0.5
+			only_own_territory = no
+			capital = 119
+			states = all
+			states_filter = {
+				is_core_of = ULS
+			}
 		}
 	}
 	
