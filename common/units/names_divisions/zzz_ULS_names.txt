@@ -9,7 +9,7 @@
 		NOT = { has_cosmetic_tag = ULS_koi}
 	}
 
-	division_types = { "military_police" }
+	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { ULS_ric ULS_uvf }
@@ -66,7 +66,7 @@ ULS_ric =
 		has_cosmetic_tag = ULS_koi
 	}
 
-	division_types = { "military_police" }
+	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { ULS_ruc ULS_uvf }
@@ -127,7 +127,7 @@ ULS_uvf =
 	# Number reservation system will tie to another group.
 	link_numbering_with = { ULS_ric ULS_ruc }
 
-	fallback_name = "No %d Home Guard"
+	fallback_name = "No. %d Home Guard"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -139,32 +139,32 @@ ULS_uvf =
 	
 	ordered =
 		{
-		1 = { 	"No %d Home Guard (East Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		2 = { 	"No %d Home Guard (West Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		3 = { 	"No %d Home Guard"							"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		4 = { 	"No %d Home Guard (North Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		5 = { 	"No %d Home Guard (South Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		6 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		7 = { 	"No %d Home Guard (Newtownards)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		8 = { 	"No %d Home Guard (Armagh)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		9 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		10 = { 	"No %d Home Guard (Portadown)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		11 = { 	"No %d Home Guard (Cookstown)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		12 = { 	"No %d Home Guard (Enniskillen)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		13 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		14 = { 	"No %d Home Guard (Londonderry)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		15 = { 	"No %d Home Guard (Coleraine)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		16 = { 	"No %d Home Guard (Ballymena)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		17 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		18 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		19 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		20 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		21 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		22 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		23 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		24 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		25 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
-		26 = { 	"No %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		1 = { 	"No. %d Home Guard (East Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		2 = { 	"No. %d Home Guard (West Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		3 = { 	"No. %d Home Guard"							"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		4 = { 	"No. %d Home Guard (North Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		5 = { 	"No. %d Home Guard (South Belfast)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		6 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		7 = { 	"No. %d Home Guard (Newtownards)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		8 = { 	"No. %d Home Guard (Armagh)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		9 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		10 = { 	"No. %d Home Guard (Portadown)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		11 = { 	"No. %d Home Guard (Cookstown)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		12 = { 	"No. %d Home Guard (Enniskillen)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		13 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		14 = { 	"No. %d Home Guard (Londonderry)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		15 = { 	"No. %d Home Guard (Coleraine)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		16 = { 	"No. %d Home Guard (Ballymena)"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		17 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		18 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		19 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		20 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		21 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		22 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		23 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		24 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		25 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
+		26 = { 	"No. %d Home Guard"			"HISTORICAL_DIVISION_LORE_PLACEHOLDER_TEXT"		"http://" }
 	}
 }
 
