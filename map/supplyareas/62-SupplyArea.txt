@@ -1,3 +1,5 @@
+#old Northern Ireland exclusive zone, now all of Ireland has one supply area in 63
+
 supply_area={
 	id=62
 	name="SUPPLYAREA_62"
