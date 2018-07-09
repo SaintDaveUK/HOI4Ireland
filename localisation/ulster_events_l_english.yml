@@ -63,13 +63,11 @@
  ulster.200.d:0 "It's that time of year again."
  
  #Republican Rebellion
- ulster.201.t:0 "Republican Rebellion!"
- ulster.201.d:0 "Republican Rebellion!"
- ulster.201.a:0 "Join the rebels!"
- ulster.201.b:0 "Crush the rebels!"
+ ulster.202.t:0 "Republican Rebellion!"
+ ulster.202.d:0 "Republican Rebellion!"
+ ulster.202.a:0 "Disaster!"
  
  #Protestant Rebellion
- ulster.202.t:0 "Protestant Rebellion!"
- ulster.202.d:0 "Protestant Rebellion!"
- ulster.202.a:0 "Join the rebels!"
- ulster.202.b:0 "Crush the rebels!"
+ ulster.203.t:0 "Protestant Rebellion!"
+ ulster.203.d:0 "Protestant Rebellion!"
+ ulster.203.a:0 "Disaster!"

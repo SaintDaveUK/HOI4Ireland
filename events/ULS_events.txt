@@ -95,7 +95,7 @@ country_event = {
 	id = ulster.20
 	title = ulster.20.t
 	desc = ulster.20.d
-	picture = report_event_ULS_james_craig_radio
+	picture = news_event_ULS_james_craig_funeral
 
 	major = yes
 	
@@ -258,7 +258,7 @@ country_event = {
 	id = ulster.102
 	title =  ulster.102.t
 	desc = ulster.102.d
-	picture = GFX_news_event_generic_read_write
+	picture = report_event_ULS_unionists
 	
 	major = yes
 		
@@ -514,18 +514,21 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_capital = 119
-		start_civil_war = {
-			ruling_party = fascism
-			ideology = neutrality
-			size = 0.5
-			only_own_territory = no
-			capital = 786
-			states = all
-			states_filter = {
-				is_core_of = IRE
+		hidden_effect = {
+			set_capital = 119
+			start_civil_war = {
+				#ruling_party = fascism
+				ideology = neutrality
+				size = 0.5
+				only_own_territory = no
+				capital = 786
+				states = all
+				states_filter = {
+					is_core_of = IRE
+				}
 			}
 		}
+		
 	}
 	
 	option = {
@@ -548,26 +551,18 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		start_civil_war = {
-			ideology = fascism
-			size = 0.5
-			states = { 119 }
-			#states_filter = {
-			#	is_core_of = ULS			
-			#}
-		}
-	}
-	immediate = {
-		set_capital = 119
-		start_civil_war = {
-			#ruling_party = fascism
-			ideology = fascism
-			size = 0.5
-			only_own_territory = no
-			capital = 119
-			states = all
-			states_filter = {
-				is_core_of = ULS
+		hidden_effect = {
+			set_capital = 786
+			start_civil_war = {
+				#ruling_party = fascism
+				ideology = fascism
+				size = 0.5
+				only_own_territory = no
+				capital = 119
+				states = all
+				states_filter = {
+					is_core_of = ULS
+				}
 			}
 		}
 	}
