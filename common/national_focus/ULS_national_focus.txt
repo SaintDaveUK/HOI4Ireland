@@ -50,7 +50,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_secular_state
-		icon = GFX_goal_generic_support_fascism
+		icon = GFX_focus_mex_triumph_over_the_cristeros
 		relative_position_id = ULS_stormont_parliament
 		prerequisite = { focus = ULS_stormont_parliament }
 		mutually_exclusive = { focus = ULS_protestant_state	}
@@ -76,7 +76,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_protestant_state
-		icon = GFX_goal_generic_support_fascism
+		icon = GFX_focus_mex_restore_the_army_of_christ
 		relative_position_id = ULS_stormont_parliament
 		prerequisite = { focus = ULS_stormont_parliament }
 		mutually_exclusive = { focus = ULS_secular_state	}
@@ -374,17 +374,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			hidden_effect = {
-				news_event = { id = ulster.11 }
-			}
-			
 			IRE = {
 				add_named_threat = { threat = -2 name = "peacefully reunited" }
-				if = {
-					limit = { is_ai = yes }
+				#if = {
+					#limit = { is_ai = yes }
 					
 					change_tag_from = ULS
 					annex_country = { target = ULS transfer_troops = yes }
+				#}
+				hidden_effect = {
+					country_event = { id = ulster.11 }
 				}
 			}
 		}
@@ -392,7 +391,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_gerrymandering
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_usa_voter_registration_act
 		relative_position_id = ULS_protestant_state
 		prerequisite = { focus = ULS_protestant_state }
 		mutually_exclusive = {
@@ -454,7 +453,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_ulster_third_way
-		icon = GFX_goal_generic_support_fascism
+		icon = GFX_focus_hol_united_netherlands
 		relative_position_id = ULS_orange_order
 		prerequisite = { focus = ULS_orange_order }
 		mutually_exclusive = {
@@ -562,6 +561,53 @@ focus_tree = {
 
 		completion_reward = {
 			ENG = { add_to_faction = ROOT }
+		}
+	}
+	
+	focus = {
+		id = ULS_recall_scotch_irish_diaspora
+		icon = GFX_focus_chi_mission_to_the_us
+		relative_position_id = ULS_ulster_third_way
+		
+		prerequisite = { 
+			focus = ULS_ulster_third_way
+		}
+		
+		bypass = {
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ULS_republican_fanatics_trigger = yes 
+			}
+		}
+		
+		x = 2
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		completion_reward = {
+			119 = { add_manpower = 100000 } #Belfast
+			#Scotch-Irish migrating from US
+			363 = { add_manpower = -20000 } #North Carolina
+			375 = { add_manpower = -10000 } #Texas
+			378 = { add_manpower = -10000 } #California
+			366 = { add_manpower = -10000 } #Florida
+			360 = { add_manpower = -10000 } #Pennsylvania
+			368 = { add_manpower = -10000 } #Tennessee
+			362 = { add_manpower = -10000 } #Virginia
+			365 = { add_manpower = -10000 } #Georgia
+			261 = { add_manpower = -10000 } #Ohio
 		}
 	}
 	
@@ -1012,7 +1058,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_german_investors
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = ULS_dig_for_victory
 		prerequisite = { focus = ULS_dig_for_victory focus = ULS_arms_industry }
 		mutually_exclusive = {
@@ -1047,6 +1093,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			GER = { add_opinion_modifier = { target = ROOT modifier = medium_increase } }
 			if = {
 				limit = {
 					is_subject = yes
@@ -1134,6 +1181,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			IRE = { add_opinion_modifier = { target = ROOT modifier = medium_increase } }
 			if = {
 				limit = {
 					is_subject = yes
@@ -1172,7 +1220,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_british_investors
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_chi_british_cooperation
 		relative_position_id = ULS_german_investors
 		prerequisite = { focus = ULS_arms_industry }
 		mutually_exclusive = {
@@ -1224,6 +1272,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			ENG = { add_opinion_modifier = { target = ROOT modifier = medium_increase } }
 			if = {
 				limit = {
 					is_subject = yes
@@ -1332,7 +1381,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_half_at_war
-		icon = GFX_focus_rom_royal_dictatorship
+		icon = GFX_goal_anschluss
 		relative_position_id = ULS_end_unemployment_crisis
 		prerequisite = { 
 			focus = ULS_end_unemployment_crisis
@@ -1611,7 +1660,7 @@ focus_tree = {
 	
 	focus = {
 		id = ULS_queens_university
-		icon = GFX_goal_generic_support_fascism
+		icon = GFX_focus_research
 		relative_position_id = ULS_belfast_defences
 		prerequisite = { focus = ULS_belfast_defences
 		focus = ULS_derry_defences}
@@ -1676,6 +1725,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			set_rule = { units_deployed_to_overlord = no }
 			#xp boost
 		}
 	}
@@ -1797,18 +1847,16 @@ focus_tree = {
 		relative_position_id = ULS_british_arms
 		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
 		mutually_exclusive = {
-			focus = ULS_conscription
+			focus = ULS_protestant_conscription
 		}
 		
 		bypass = {
-			OR = {
-				has_idea = volunteer_only
-				has_idea = limited_conscription
-				has_idea = extensive_conscription
-				has_idea = service_by_requirement
-				has_idea = all_adults_serve
-				has_idea = scraping_the_barrel
-			}
+			has_idea = volunteer_only
+			#has_idea = limited_conscription
+			#has_idea = extensive_conscription
+			#has_idea = service_by_requirement
+			#has_idea = all_adults_serve
+			#has_idea = scraping_the_barrel
 		}
 		
 		x = -2
@@ -1835,7 +1883,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_conscription
+		id = ULS_protestant_conscription
 		icon = GFX_goal_generic_support_fascism
 		relative_position_id = ULS_british_arms
 		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
@@ -1882,19 +1930,114 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = limited_conscription
+		}
+	}
+	
+	focus = {
+		id = ULS_catholic_conscription
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_protestant_conscription
+		prerequisite = { focus = ULS_protestant_conscription}
+		mutually_exclusive = {
 			
-			add_popularity = { ideology = neutrality popularity = 0.2 } 
+		}
+		
+		available = {
+			has_war = yes
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+		
+		x = 0
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			modifier = {
+				factor = 100
+				has_government = fascism
+			}
+			modifier = {
+				# "gaga" James Craig would have really pushed for conscription!
+				ULS_james_craig_is_gaga_trigger = yes
+				factor = 100
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = ULS_catholic_conscription_idea
 		}
 	}
 	
 	focus = {
 		id = ULS_reestablish_anglicanism
 		icon = GFX_goal_generic_support_fascism
-		#relative_position_id = ULS_british_arms
+		relative_position_id = ULS_protestant_state
 		prerequisite = {
-			#focus = ULS_british_arms
+			focus = ULS_protestant_state
 		}
 		mutually_exclusive = {
+			focus = ULS_establish_presbyterianism
+			focus = ULS_disestablishmentarianism
+		}
+		
+		available = {
+			#OR = {
+			#	has_war = yes
+			#}
+		}
+		
+		bypass = {
+			#OR = {
+			#	has_idea = limited_conscription
+			#	has_idea = extensive_conscription
+			#	has_idea = service_by_requirement
+			#	has_idea = all_adults_serve
+			#	has_idea = scraping_the_barrel
+			#}
+		}
+		
+		x = -2
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+   			factor = 1
+   			#modifier = {
+			#	factor = 100
+			#	has_government = fascism
+			#}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = limited_conscription
+			
+			add_popularity = { ideology = neutrality popularity = 0.1 } 
+		}
+	}
+	
+	focus = {
+		id = ULS_disestablishmentarianism
+		icon = GFX_goal_generic_support_fascism
+		relative_position_id = ULS_protestant_state
+		prerequisite = {
+			focus = ULS_protestant_state
+		}
+		mutually_exclusive = {
+			focus = ULS_reestablish_anglicanism
 			focus = ULS_establish_presbyterianism
 		}
 		
@@ -1914,7 +2057,7 @@ focus_tree = {
 			#}
 		}
 		
-		x = 27
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -1931,20 +2074,20 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = limited_conscription
-			
-			add_popularity = { ideology = neutrality popularity = 0.2 } 
+			add_popularity = { ideology = neutrality popularity = 0.1 } 
 		}
 	}
+	
 	focus = {
 		id = ULS_establish_presbyterianism
 		icon = GFX_goal_generic_support_fascism
-		#relative_position_id = ULS_british_arms
+		relative_position_id = ULS_protestant_state
 		prerequisite = {
-			#focus = ULS_british_arms
+			focus = ULS_protestant_state
 		}
 		mutually_exclusive = {
 			focus = ULS_reestablish_anglicanism
+			focus = ULS_disestablishmentarianism
 		}
 		
 		available = {
@@ -1963,7 +2106,7 @@ focus_tree = {
 			#}
 		}
 		
-		x = 25
+		x = 2
 		y = 1
 		cost = 10
 		

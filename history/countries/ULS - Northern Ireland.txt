@@ -23,9 +23,9 @@ if = {
 	}
 	ENG = { set_autonomy = { target = ULS autonomy_state = autonomy_integrated_puppet } }
 }
+ENG = { remove_from_faction = ULS } 
 
 set_cosmetic_tag = ULS_uk
-
 
 
 

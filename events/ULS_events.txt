@@ -43,6 +43,7 @@ news_event = {
 	
 	option = {
 		name = "Interesting."
+		annex_country = { target = ULS transfer_troops = yes }
 	}
 }
 ##########################################

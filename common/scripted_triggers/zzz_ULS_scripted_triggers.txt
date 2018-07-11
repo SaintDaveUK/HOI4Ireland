@@ -75,7 +75,9 @@ ULS_protestant_trigger = {
 		original_tag = NOR
 		original_tag = NZL
 		original_tag = SAF
+		original_tag = SCO
 		original_tag = SWE
 		original_tag = WGR
+		original_tag = WLS
 	}
 }
