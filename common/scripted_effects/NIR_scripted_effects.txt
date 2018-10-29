@@ -1,5 +1,5 @@
-#ULS_elect_craig_effect = yes
-ULS_elect_craig_effect = {
+#NIR_elect_craig_effect = yes
+NIR_elect_craig_effect = {
 	create_country_leader = { #uup
 		id = 99941
 		name = "James Craig"
@@ -13,8 +13,8 @@ ULS_elect_craig_effect = {
 	}
 }
 
-#ULS_elect_andrews_effect = yes
-ULS_elect_andrews_effect = {
+#NIR_elect_andrews_effect = yes
+NIR_elect_andrews_effect = {
 	create_country_leader = {
 		id = 99942
 		name = "John M. Andrews"
@@ -27,11 +27,11 @@ ULS_elect_andrews_effect = {
 		}
 	}
 		
-	set_country_flag = ULS_pm_andrews
+	set_country_flag = NIR_pm_andrews
 }
 
-#ULS_elect_brooke_effect = yes
-ULS_elect_brooke_effect = {
+#NIR_elect_brooke_effect = yes
+NIR_elect_brooke_effect = {
 	create_country_leader = { #uup
 		id = 99943
 		name = "Sir Basil Brooke"
@@ -44,8 +44,8 @@ ULS_elect_brooke_effect = {
 	}
 }
 
-#ULS_elect_londonderry_effect = yes
-ULS_elect_londonderry_effect = {
+#NIR_elect_londonderry_effect = yes
+NIR_elect_londonderry_effect = {
 	
 	set_party_name = { ideology = fascism long_name = "National Fascist Government" name = "Fascists" }
 	
@@ -61,15 +61,15 @@ ULS_elect_londonderry_effect = {
 	}
 }
 
-#ULS_set_derry_name_effect = yes
-ULS_set_derry_name_effect = {
+#NIR_set_derry_name_effect = yes
+NIR_set_derry_name_effect = {
 	
 	if = {
 		limit = {
-			786 = { is_controlled_by = ROOT }
+			789 = { is_controlled_by = ROOT }
 		}
 		#DERRY
-		ULS_to_derry_effect = yes #default
+		NIR_to_derry_effect = yes #default
 		
 		#LONDONDERRY override
 		if = {
@@ -77,7 +77,7 @@ ULS_set_derry_name_effect = {
 				OR = {
 					original_tag = ENG
 					AND = {
-						original_tag = ULS
+						original_tag = NIR
 						AND = {
 							NOT = { is_subject_of = IRE }
 							NOT = { has_government = neutrality }
@@ -85,7 +85,7 @@ ULS_set_derry_name_effect = {
 					}
 				}
 			}
-			ULS_to_londonderry_effect = yes
+			NIR_to_londonderry_effect = yes
 		}
 		
 		#FREE DERRY override
@@ -94,27 +94,27 @@ ULS_set_derry_name_effect = {
 				has_government = neutrality
 				OR = {
 					original_tag = IRE
-					original_tag = ULS
+					original_tag = NIR
 				}
 			}
-			ULS_to_free_derry_effect = yes
+			NIR_to_free_derry_effect = yes
 		}
 	}
 }
 
 
-#ULS_to_derry_effect = yes
-ULS_to_derry_effect = {
+#NIR_to_derry_effect = yes
+NIR_to_derry_effect = {
 	set_province_name = { id = 276 name = "Derry" }
 }
 
-#ULS_to_londonderry_effect = yes
-ULS_to_londonderry_effect = {
+#NIR_to_londonderry_effect = yes
+NIR_to_londonderry_effect = {
 	set_province_name = { id = 276 name = "Londonderry" }
 }
 
-#ULS_to_free_derry_effect = yes
-ULS_to_free_derry_effect = {
+#NIR_to_free_derry_effect = yes
+NIR_to_free_derry_effect = {
 	set_province_name = { id = 276 name = "Free Derry" }
 }
 

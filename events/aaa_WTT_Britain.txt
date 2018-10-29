@@ -27,7 +27,7 @@ country_event = {
 		
 		
 		###########changed
-		IRE = { puppet = ULS }
+		IRE = { puppet = NIR }
 		####################
 		
 		

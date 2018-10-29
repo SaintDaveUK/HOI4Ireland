@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-		ULS_religious_sectarianism = {
+		NIR_religious_sectarianism = {
 
 			allowed = {
 				always = no
@@ -20,7 +20,7 @@ ideas = {
 				stability_factor = -0.4
 			}
 		}
-		ULS_appeased_catholics = {
+		NIR_appeased_catholics = {
 
 			allowed = {
 				always = no
@@ -40,10 +40,10 @@ ideas = {
 			}
 		}
 		
-		ULS_old_guard = {
+		NIR_old_guard = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				has_government = democratic
 			}
 
@@ -60,10 +60,10 @@ ideas = {
 			}
 		}
 		
-		ULS_unemployment_crisis = {
+		NIR_unemployment_crisis = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				always = no
 			}
 
@@ -82,10 +82,10 @@ ideas = {
 			}
 		}
 		
-		ULS_working_sunday_idea = {
+		NIR_working_sunday_idea = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				always = no
 			}
 
@@ -104,10 +104,10 @@ ideas = {
 			}
 		}
 		
-		ULS_marching_season = {
+		NIR_marching_season = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				always = yes
 			}
 
@@ -127,10 +127,10 @@ ideas = {
 			}
 		}
 		
-		ULS_marching_season_riots = {
+		NIR_marching_season_riots = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				always = yes
 			}
 
@@ -154,10 +154,10 @@ ideas = {
 	
 	political_advisor = {
 		
-		ULS_fascist_demagogue = {
+		NIR_fascist_demagogue = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
 			picture = marina_lee
@@ -180,13 +180,13 @@ ideas = {
 			}
 		}
 		
-		ULS_democratic_reformer = {
+		NIR_democratic_reformer = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
-			picture = ULS_orangeman_2
+			picture = NIR_orangeman_2
 
 			
 			traits = { democratic_reformer }
@@ -206,43 +206,43 @@ ideas = {
 			}
 		}
 		
-		ULS_backroom_backstabber = {
+		NIR_backroom_backstabber = {
 			
-			picture = ULS_orangeman_1
+			picture = NIR_orangeman_1
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
 			traits = { backroom_backstabber }
 		}
 		
-		ULS_prince_of_terror = {
+		NIR_prince_of_terror = {
 
 			picture = donitz
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
 			traits = { prince_of_terror }
 		}
 		
-		ULS_captain_of_industry = {
+		NIR_captain_of_industry = {
 
 			picture = generic_political_advisor_europe_3
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
 			traits = { captain_of_industry }
 		}
 		
-		ULS_republican_nationalist = {
+		NIR_republican_nationalist = {
 			
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 				NOT = { is_subject_of = IRE }
 			}
 			
@@ -266,10 +266,10 @@ ideas = {
 			}
 		}
 		
-		ULS_fortification_engineer = {
+		NIR_fortification_engineer = {
 
 			allowed = {
-				original_tag = ULS
+				original_tag = NIR
 			}
 			
 			#available = {
@@ -284,10 +284,10 @@ ideas = {
 		
 		designer = yes
 		
-		harland_wolff = {
+		NIR_harland_wolff = {
 			
 			allowed = {
-				original_TAG = ULS
+				original_TAG = NIR
 			}
 			
 			research_bonus = {
@@ -302,10 +302,10 @@ ideas = {
 			
 		designer = yes
 		
-		ULS_medium_aircraft_manufacturer = {
+		NIR_medium_aircraft_manufacturer = {
 			
 			allowed = {
-				original_TAG = ULS
+				original_TAG = NIR
 			}
 			
 			research_bonus = {
@@ -320,10 +320,10 @@ ideas = {
 			
 		designer = yes
 		
-		ULS_infantry_equipment_manufacturer = {
+		NIR_infantry_equipment_manufacturer = {
 
 			allowed = {
-				original_TAG = ULS
+				original_TAG = NIR
 			}
 			
 			research_bonus = {
@@ -333,10 +333,10 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 		}	
 		
-		ULS_support_equipment_manufacturer = {
+		NIR_support_equipment_manufacturer = {
 
 			allowed = {
-				original_TAG = ULS
+				original_TAG = NIR
 			}
 			
 			research_bonus = {
@@ -351,10 +351,10 @@ ideas = {
 
 		
 
-		ULS_industrial_concern = {
+		NIR_industrial_concern = {
 			
 			allowed = {
-				original_TAG = ULS
+				original_TAG = NIR
 			}
 			
 			research_bonus = {

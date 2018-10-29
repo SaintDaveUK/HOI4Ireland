@@ -13,53 +13,53 @@
 #	}
 # 
 
-#ULS_james_craig_is_ruling_trigger = yes
-ULS_james_craig_is_ruling_trigger = {
-	original_tag = ULS
+#NIR_james_craig_is_ruling_trigger = yes
+NIR_james_craig_is_ruling_trigger = {
+	original_tag = NIR
 	has_country_leader = { ruling_only = yes id = 99941 }
 }
 
 
-#ULS_james_craig_is_gaga_trigger = yes
-ULS_james_craig_is_gaga_trigger = {
-	original_tag = ULS
-	ULS_james_craig_is_ruling_trigger = yes
+#NIR_james_craig_is_gaga_trigger = yes
+NIR_james_craig_is_gaga_trigger = {
+	original_tag = NIR
+	NIR_james_craig_is_ruling_trigger = yes
 	has_country_flag = james_craig_is_gaga
 }
 
-#ULS_protestant_fanatics_trigger = yes
-ULS_protestant_fanatics_trigger = {
-	original_tag = ULS
+#NIR_protestant_fanatics_trigger = yes
+NIR_protestant_fanatics_trigger = {
+	original_tag = NIR
 	NOT = { has_government = neutrality }
 	OR = {
-		ULS_james_craig_is_gaga_trigger = yes
+		NIR_james_craig_is_gaga_trigger = yes
 		has_government = fascism
-		has_completed_focus = ULS_ulster_third_way
+		has_completed_focus = NIR_ulster_third_way
 	}
 }
 
-#ULS_republican_trigger = yes
-ULS_republican_trigger = {
-	original_tag = ULS
+#NIR_republican_trigger = yes
+NIR_republican_trigger = {
+	original_tag = NIR
 	OR = {
-		ULS_republican_fanatics_trigger = yes
+		NIR_republican_fanatics_trigger = yes
 		overlord = {
 			original_tag = IRE
 		}
 	}
 }
 
-#ULS_republican_fanatics_trigger = yes
-ULS_republican_fanatics_trigger = {
-	original_tag = ULS
+#NIR_republican_fanatics_trigger = yes
+NIR_republican_fanatics_trigger = {
+	original_tag = NIR
 	has_government = neutrality
 }
 
-ULS_protestant_trigger = {
+NIR_protestant_trigger = {
 	NOT = { has_government = communism } 
 	OR = {
 		original_tag = ENG
-		original_tag = ULS
+		original_tag = NIR
 		original_tag = USA
 		original_tag = AST
 		original_tag = BOT

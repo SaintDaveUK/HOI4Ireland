@@ -6,14 +6,14 @@ focus_tree = {
 		
 		modifier = {
 			add = 10
-			tag = ULS
+			tag = NIR
 		}
 	}
 	
 	default = no
 	
 	focus = {
-		id = ULS_stormont_parliament
+		id = NIR_stormont_parliament
 		icon = GFX_focus_generic_self_management
 
 		x = 5
@@ -31,7 +31,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_civil_war
+		id = NIR_civil_war
 		icon = GFX_focus_generic_self_management
 
 		x = 0
@@ -44,16 +44,16 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			ULS_civilwar_player_neutrality_effect = yes
+			NIR_civilwar_player_neutrality_effect = yes
 		}
 	}
 	
 	focus = {
-		id = ULS_secular_state
+		id = NIR_secular_state
 		icon = GFX_focus_mex_triumph_over_the_cristeros
-		relative_position_id = ULS_stormont_parliament
-		prerequisite = { focus = ULS_stormont_parliament }
-		mutually_exclusive = { focus = ULS_protestant_state	}
+		relative_position_id = NIR_stormont_parliament
+		prerequisite = { focus = NIR_stormont_parliament }
+		mutually_exclusive = { focus = NIR_protestant_state	}
 		
 		x = -2
 		y = 1
@@ -62,7 +62,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 		
@@ -75,11 +75,11 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_protestant_state
+		id = NIR_protestant_state
 		icon = GFX_focus_mex_restore_the_army_of_christ
-		relative_position_id = ULS_stormont_parliament
-		prerequisite = { focus = ULS_stormont_parliament }
-		mutually_exclusive = { focus = ULS_secular_state	}
+		relative_position_id = NIR_stormont_parliament
+		prerequisite = { focus = NIR_stormont_parliament }
+		mutually_exclusive = { focus = NIR_secular_state	}
 		
 		x = 2
 		y = 1
@@ -89,7 +89,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -101,19 +101,19 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_catholic_appeasement
+		id = NIR_catholic_appeasement
 		icon = GFX_goal_generic_improve_relations
-		relative_position_id = ULS_secular_state
-		prerequisite = { focus = ULS_secular_state }
+		relative_position_id = NIR_secular_state
+		prerequisite = { focus = NIR_secular_state }
 		mutually_exclusive = {
-			focus = ULS_reaffirm_partition
+			focus = NIR_reaffirm_partition
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 		
@@ -131,19 +131,19 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_power_transfer
+		id = NIR_power_transfer
 		icon = GFX_goal_generic_national_unity
-		relative_position_id = ULS_catholic_appeasement
-		prerequisite = { focus = ULS_catholic_appeasement }
+		relative_position_id = NIR_catholic_appeasement
+		prerequisite = { focus = NIR_catholic_appeasement }
 		mutually_exclusive = {
-			focus = ULS_declaration_of_unity
+			focus = NIR_declaration_of_unity
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 		
@@ -168,7 +168,7 @@ focus_tree = {
 				is_subject_of = ENG
 				compare_autonomy_state > autonomy_puppet
 			}
-			ULS = {
+			NIR = {
 				is_subject_of = ENG
 				compare_autonomy_state > autonomy_integrated_puppet
 			}
@@ -177,12 +177,12 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				set_autonomy = {
-					target = ULS
+					target = NIR
 					autonomy_state = autonomy_free
 				}			
 			}
 			drop_cosmetic_tag = yes
-			IRE = { puppet = ULS }
+			IRE = { puppet = NIR }
 			
 			hidden_effect = {
 				news_event = { id = ulster.10 }
@@ -191,12 +191,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_catholic_representation
+		id = NIR_catholic_representation
 		icon = GFX_goal_generic_national_unity
-		relative_position_id = ULS_catholic_appeasement
-		prerequisite = { focus = ULS_catholic_appeasement }
+		relative_position_id = NIR_catholic_appeasement
+		prerequisite = { focus = NIR_catholic_appeasement }
 		mutually_exclusive = {
-			focus = ULS_power_transfer
+			focus = NIR_power_transfer
 		}
 		
 		bypass = {
@@ -207,7 +207,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 		
@@ -240,19 +240,19 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_declaration_of_unity
+		id = NIR_declaration_of_unity
 		icon = GFX_goal_generic_national_unity
-		relative_position_id = ULS_catholic_representation
-		prerequisite = { focus = ULS_catholic_representation }
+		relative_position_id = NIR_catholic_representation
+		prerequisite = { focus = NIR_catholic_representation }
 		#mutually_exclusive = {
-		#	focus = ULS_power_transfer
+		#	focus = NIR_power_transfer
 		#}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 		
@@ -286,21 +286,21 @@ focus_tree = {
 		
 			hidden_effect = {
 				set_autonomy = {
-					target = ULS
+					target = NIR
 					autonomy_state = autonomy_free
 				}			
 			}
 			drop_cosmetic_tag = yes
-			IRE = { puppet = ULS }
+			IRE = { puppet = NIR }
 			
 		}
 	}
 	
 	focus = {
-		id = ULS_province_of_ulster
+		id = NIR_province_of_ulster
 		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ULS_power_transfer
-		prerequisite = { focus = ULS_power_transfer focus = ULS_catholic_representation}
+		relative_position_id = NIR_power_transfer
+		prerequisite = { focus = NIR_power_transfer focus = NIR_catholic_representation}
 		
 		x = 0
 		y = 1
@@ -313,15 +313,15 @@ focus_tree = {
 			is_subject_of = IRE
 			IRE = {
 				AND = {
-					has_full_control_of_state = 785
-					owns_state = 785
+					has_full_control_of_state = 788
+					owns_state = 788
 				}
 			}			
 		}
 		
 		
 		bypass = {
-			785 = { is_owned_by = ULS }
+			788 = { is_owned_by = NIR }
 		}
 
 		cancel_if_invalid = yes
@@ -332,24 +332,24 @@ focus_tree = {
 			if = {
 				limit = {
 					IRE = {
-						has_full_control_of_state = 785
-						owns_state = 785
+						has_full_control_of_state = 788
+						owns_state = 788
 					}
 				}
-				set_state_owner = 785
+				set_state_owner = 788
 			}
 			add_autonomy_ratio = {
 				value = -0.25
-				localization = ULS_province_of_ulster
+				localization = NIR_province_of_ulster
 			}
 		}
 	}
 	
 	focus = {
-		id = ULS_united_ireland
+		id = NIR_united_ireland
 		icon = GFX_goal_generic_national_unity
-		relative_position_id = ULS_province_of_ulster
-		prerequisite = { focus = ULS_province_of_ulster}
+		relative_position_id = NIR_province_of_ulster
+		prerequisite = { focus = NIR_province_of_ulster}
 		
 		
 		
@@ -360,7 +360,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_protestant_fanatics_trigger = yes 
+				NIR_protestant_fanatics_trigger = yes 
 			}
 		}
 				
@@ -379,8 +379,8 @@ focus_tree = {
 				#if = {
 					#limit = { is_ai = yes }
 					
-					change_tag_from = ULS
-					annex_country = { target = ULS transfer_troops = yes }
+					change_tag_from = NIR
+					annex_country = { target = NIR transfer_troops = yes }
 				#}
 				hidden_effect = {
 					country_event = { id = ulster.11 }
@@ -390,10 +390,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_gerrymandering
+		id = NIR_gerrymandering
 		icon = GFX_focus_usa_voter_registration_act
-		relative_position_id = ULS_protestant_state
-		prerequisite = { focus = ULS_protestant_state }
+		relative_position_id = NIR_protestant_state
+		prerequisite = { focus = NIR_protestant_state }
 		mutually_exclusive = {
 		}
 		
@@ -404,7 +404,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 
@@ -420,10 +420,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_orange_order
+		id = NIR_orange_order
 		icon = GFX_focus_generic_home_defense
-		relative_position_id = ULS_gerrymandering
-		prerequisite = { focus = ULS_gerrymandering }
+		relative_position_id = NIR_gerrymandering
+		prerequisite = { focus = NIR_gerrymandering }
 		mutually_exclusive = {
 		}
 		
@@ -431,7 +431,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -452,19 +452,19 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_ulster_third_way
+		id = NIR_ulster_third_way
 		icon = GFX_focus_hol_united_netherlands
-		relative_position_id = ULS_orange_order
-		prerequisite = { focus = ULS_orange_order }
+		relative_position_id = NIR_orange_order
+		prerequisite = { focus = NIR_orange_order }
 		mutually_exclusive = {
-			focus = ULS_british_heritage
+			focus = NIR_british_heritage
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -475,7 +475,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 100
-				ULS_james_craig_is_gaga_trigger = yes
+				NIR_james_craig_is_gaga_trigger = yes
 			}
 		}
 
@@ -490,25 +490,25 @@ focus_tree = {
 			
 			add_autonomy_ratio = {
 				value = 0.1
-				localization = ULS_ulster_third_way
+				localization = NIR_ulster_third_way
 			}
 		}
 	}
 	
 	focus = {
-		id = ULS_british_heritage
+		id = NIR_british_heritage
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		relative_position_id = ULS_orange_order
-		prerequisite = { focus = ULS_orange_order }
+		relative_position_id = NIR_orange_order
+		prerequisite = { focus = NIR_orange_order }
 		mutually_exclusive = {
-			focus = ULS_ulster_third_way
+			focus = NIR_ulster_third_way
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -529,10 +529,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_stand_by_britain
+		id = NIR_stand_by_britain
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		relative_position_id = ULS_british_heritage
-		prerequisite = { focus = ULS_british_heritage }
+		relative_position_id = NIR_british_heritage
+		prerequisite = { focus = NIR_british_heritage }
 		mutually_exclusive = {
 		}
 		
@@ -544,7 +544,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -565,12 +565,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_recall_scotch_irish_diaspora
+		id = NIR_recall_scotch_irish_diaspora
 		icon = GFX_focus_chi_mission_to_the_us
-		relative_position_id = ULS_ulster_third_way
+		relative_position_id = NIR_ulster_third_way
 		
 		prerequisite = { 
-			focus = ULS_ulster_third_way
+			focus = NIR_ulster_third_way
 		}
 		
 		bypass = {
@@ -580,7 +580,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -614,22 +614,22 @@ focus_tree = {
 
 	
 	focus = {
-		id = ULS_for_god_and_ulster
+		id = NIR_for_god_and_ulster
 		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ULS_ulster_third_way
+		relative_position_id = NIR_ulster_third_way
 		prerequisite = { 
-			focus = ULS_ulster_third_way
+			focus = NIR_ulster_third_way
 		}
 		
 		bypass = {
-			785 = { is_claimed_by = ULS }
+			788 = { is_claimed_by = NIR }
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 		
@@ -646,20 +646,20 @@ focus_tree = {
 		
 
 		completion_reward = {
-			785 = { add_claim_by = ULS }
+			788 = { add_claim_by = NIR }
 			add_named_threat = { threat = 1 name = "claimed the Ulster Borders" }
 			add_autonomy_ratio = {
 				value = 0.25
-				localization = ULS_for_god_and_ulster
+				localization = NIR_for_god_and_ulster
 			}
 		}
 	}
 	
 	focus = {
-		id = ULS_sever_tires
+		id = NIR_sever_tires
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		relative_position_id = ULS_for_god_and_ulster
-		prerequisite = { focus = ULS_for_god_and_ulster }
+		relative_position_id = NIR_for_god_and_ulster
+		prerequisite = { focus = NIR_for_god_and_ulster }
 		mutually_exclusive = {
 		}
 		
@@ -680,23 +680,23 @@ focus_tree = {
 
 		completion_reward = {
 			set_autonomy = {
-				target = ULS
+				target = NIR
 				autonomy_state = autonomy_free
 			}
 			if = {
-				limit = { has_cosmetic_tag = ULS_uk }
+				limit = { has_cosmetic_tag = NIR_uk }
 				drop_cosmetic_tag = yes
 			}
 		}
 	}
 	
 	focus = {
-		id = ULS_german_alliance
+		id = NIR_german_alliance
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		relative_position_id = ULS_sever_tires
-		prerequisite = { focus = ULS_sever_tires }
+		relative_position_id = NIR_sever_tires
+		prerequisite = { focus = NIR_sever_tires }
 		mutually_exclusive = {
-			focus = ULS_protestant_league
+			focus = NIR_protestant_league
 		}
 		
 		bypass = {
@@ -719,12 +719,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_protestant_league
+		id = NIR_protestant_league
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		relative_position_id = ULS_sever_tires
-		prerequisite = { focus = ULS_sever_tires }
+		relative_position_id = NIR_sever_tires
+		prerequisite = { focus = NIR_sever_tires }
 		mutually_exclusive = {
-			focus = ULS_german_alliance
+			focus = NIR_german_alliance
 		}
 		
 		bypass = {
@@ -750,15 +750,15 @@ focus_tree = {
 			news_event = { id = ulster.170 }
 			
 			#every_country = {
-			#	limit = { ULS_protestant_trigger = yes }
-			#	ULS = {
+			#	limit = { NIR_protestant_trigger = yes }
+			#	NIR = {
 			#		add_to_faction = PREV
 			#	}
 			#}
 			#
 			#every_country = {
-			#	limit = { ULS_protestant_trigger = no }
-			#	ULS = {
+			#	limit = { NIR_protestant_trigger = no }
+			#	NIR = {
 			#		add_to_faction = PREV
 			#	}
 			#}
@@ -766,12 +766,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_kingdom_of_ireland
+		id = NIR_kingdom_of_ireland
 		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ULS_ulster_third_way
+		relative_position_id = NIR_ulster_third_way
 		prerequisite = { 
-			focus = ULS_ulster_third_way
-			focus = ULS_british_heritage
+			focus = NIR_ulster_third_way
+			focus = NIR_british_heritage
 		}
 		
 		
@@ -796,7 +796,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 
@@ -805,17 +805,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_cosmetic_tag = ULS_koi
+			set_cosmetic_tag = NIR_koi
 			custom_effect_tooltip = "Cosmetic tag change."
 		}
 	}
 	
 	focus = {
-		id = ULS_claim_ireland
+		id = NIR_claim_ireland
 		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ULS_kingdom_of_ireland
+		relative_position_id = NIR_kingdom_of_ireland
 		prerequisite = { 
-			focus = ULS_kingdom_of_ireland
+			focus = NIR_kingdom_of_ireland
 		}
 		
 		available = {
@@ -826,8 +826,8 @@ focus_tree = {
 			119 = { is_claimed_by = ROOT }
 			134 = { is_claimed_by = ROOT }
 			135 = { is_claimed_by = ROOT }
-			786 = { is_claimed_by = ROOT }
-			785 = { is_claimed_by = ROOT }
+			789 = { is_claimed_by = ROOT }
+			788 = { is_claimed_by = ROOT }
 		}
 		
 		x = 0
@@ -837,7 +837,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 
@@ -850,17 +850,17 @@ focus_tree = {
 			119 = { add_claim_by = ROOT }
 			134 = { add_claim_by = ROOT }
 			135 = { add_claim_by = ROOT }
-			786 = { add_claim_by = ROOT }
-			785 = { add_claim_by = ROOT }
+			789 = { add_claim_by = ROOT }
+			788 = { add_claim_by = ROOT }
 		}
 	}
 	
 	focus = {
-		id = ULS_war_for_ireland
-		icon = ULS_claim_ireland
-		relative_position_id = ULS_claim_ireland
+		id = NIR_war_for_ireland
+		icon = NIR_claim_ireland
+		relative_position_id = NIR_claim_ireland
 		prerequisite = { 
-			focus = ULS_claim_ireland
+			focus = NIR_claim_ireland
 		}
 		
 		available = {
@@ -874,8 +874,8 @@ focus_tree = {
 					owns_state = 119
 					owns_state = 134
 					owns_state = 135
-					owns_state = 786
-					owns_state = 785
+					owns_state = 789
+					owns_state = 788
 				}
 			}
 		}
@@ -885,8 +885,8 @@ focus_tree = {
 			has_full_control_of_state = 119
 			has_full_control_of_state = 134
 			has_full_control_of_state = 135
-			has_full_control_of_state = 786
-			has_full_control_of_state = 785
+			has_full_control_of_state = 789
+			has_full_control_of_state = 788
 		}
 		
 		x = 0
@@ -896,7 +896,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ULS_republican_fanatics_trigger = yes 
+				NIR_republican_fanatics_trigger = yes 
 			}
 		}
 
@@ -908,7 +908,7 @@ focus_tree = {
 			create_wargoal = {
 				type = take_state_focus
 				target = IRE
-				generator = { 113 119 134 135 786 785} 
+				generator = { 113 119 134 135 789 788} 
 			}
 		}
 	}
@@ -924,10 +924,10 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_flax_farming
+		id = NIR_flax_farming
 		icon = GFX_goal_generic_support_fascism
-		#relative_position_id = ULS_orange_order
-		#prerequisite = { focus = ULS_orange_order }
+		#relative_position_id = NIR_orange_order
+		#prerequisite = { focus = NIR_orange_order }
 		mutually_exclusive = {
 		}
 		
@@ -945,7 +945,7 @@ focus_tree = {
 		completion_reward = {
 			#consumer_goods_factor = 0.1
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -957,10 +957,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_dig_for_victory
+		id = NIR_dig_for_victory
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_flax_farming
-		prerequisite = { focus = ULS_flax_farming }
+		relative_position_id = NIR_flax_farming
+		prerequisite = { focus = NIR_flax_farming }
 		mutually_exclusive = {
 		}
 		
@@ -978,7 +978,7 @@ focus_tree = {
 		completion_reward = {
 			#consumer_goods_factor = 0.1
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -990,10 +990,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_industry_focus
+		id = NIR_industry_focus
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_flax_farming
-		#prerequisite = { focus = ULS_orange_order }
+		relative_position_id = NIR_flax_farming
+		#prerequisite = { focus = NIR_orange_order }
 		mutually_exclusive = {
 		}
 		
@@ -1023,10 +1023,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_arms_industry
+		id = NIR_arms_industry
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_industry_focus
-		prerequisite = { focus = ULS_industry_focus }
+		relative_position_id = NIR_industry_focus
+		prerequisite = { focus = NIR_industry_focus }
 		mutually_exclusive = {
 		}
 		
@@ -1057,13 +1057,13 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_german_investors
+		id = NIR_german_investors
 		icon = GFX_focus_chi_mission_to_germany
-		relative_position_id = ULS_dig_for_victory
-		prerequisite = { focus = ULS_dig_for_victory focus = ULS_arms_industry }
+		relative_position_id = NIR_dig_for_victory
+		prerequisite = { focus = NIR_dig_for_victory focus = NIR_arms_industry }
 		mutually_exclusive = {
-			focus = ULS_british_investors
-			focus = ULS_irish_investors
+			focus = NIR_british_investors
+			focus = NIR_irish_investors
 		}
 		
 		available = {
@@ -1104,7 +1104,7 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = -0.25
-						localization = ULS_german_investors
+						localization = NIR_german_investors
 					}
 				}
 				if = {
@@ -1113,13 +1113,13 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = 0.25
-						localization = ULS_german_investors
+						localization = NIR_german_investors
 					}
 				}
 			}
 			
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1140,13 +1140,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_irish_investors
+		id = NIR_irish_investors
 		icon = GFX_goal_generic_construct_civilian
-		relative_position_id = ULS_german_investors
-		prerequisite = { focus = ULS_dig_for_victory }
+		relative_position_id = NIR_german_investors
+		prerequisite = { focus = NIR_dig_for_victory }
 		mutually_exclusive = {
-			focus = ULS_german_investors
-			focus = ULS_british_investors
+			focus = NIR_german_investors
+			focus = NIR_british_investors
 		}
 		
 		x = -2
@@ -1168,15 +1168,15 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 100
-				ULS_republican_fanatics_trigger = yes
+				NIR_republican_fanatics_trigger = yes
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ULS_secular_state
+				has_completed_focus = NIR_secular_state
 			}
 			modifier = {
 				factor = 0.01
-				ULS_protestant_fanatics_trigger = yes
+				NIR_protestant_fanatics_trigger = yes
 			}
 		}
 
@@ -1192,7 +1192,7 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = -0.25
-						localization = ULS_irish_investors
+						localization = NIR_irish_investors
 					}
 				}
 				if = {
@@ -1201,12 +1201,12 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = 0.25
-						localization = ULS_irish_investors
+						localization = NIR_irish_investors
 					}
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1219,13 +1219,13 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_british_investors
+		id = NIR_british_investors
 		icon = GFX_focus_chi_british_cooperation
-		relative_position_id = ULS_german_investors
-		prerequisite = { focus = ULS_arms_industry }
+		relative_position_id = NIR_german_investors
+		prerequisite = { focus = NIR_arms_industry }
 		mutually_exclusive = {
-			focus = ULS_german_investors
-			focus = ULS_irish_investors
+			focus = NIR_german_investors
+			focus = NIR_irish_investors
 		}
 		
 		x = 2
@@ -1243,7 +1243,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.01
-				ULS_republican_fanatics_trigger = yes
+				NIR_republican_fanatics_trigger = yes
 			}
    			modifier = {
 				factor = 0.01
@@ -1251,19 +1251,19 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ULS_protestant_state
+				has_completed_focus = NIR_protestant_state
 			}
 			modifier = {
 				factor = 0.1
-				has_completed_focus = ULS_ulster_third_way
+				has_completed_focus = NIR_ulster_third_way
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ULS_british_arms
+				has_completed_focus = NIR_british_arms
 			}
 			modifier = {
 				factor = 0.1
-				has_completed_focus = ULS_ulster_arms
+				has_completed_focus = NIR_ulster_arms
 			}
 		}
 
@@ -1283,7 +1283,7 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = -0.25
-						localization = ULS_british_investors
+						localization = NIR_british_investors
 					}
 				}
 				if = {
@@ -1292,7 +1292,7 @@ focus_tree = {
 					}
 					add_autonomy_ratio = {
 						value = 0.25
-						localization = ULS_british_investors
+						localization = NIR_british_investors
 					}
 				}
 			}
@@ -1310,10 +1310,10 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_develop_docklands
-		icon = ULS_goal_generic_construct_infrastructure
-		relative_position_id = ULS_german_investors
-		prerequisite = { focus = ULS_british_investors focus = ULS_irish_investors focus = ULS_german_investors }
+		id = NIR_develop_docklands
+		icon = NIR_goal_generic_construct_infrastructure
+		relative_position_id = NIR_german_investors
+		prerequisite = { focus = NIR_british_investors focus = NIR_irish_investors focus = NIR_german_investors }
 		mutually_exclusive = {
 		}
 		
@@ -1339,7 +1339,7 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
@@ -1353,10 +1353,10 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_end_unemployment_crisis
-		icon = ULS_working_sunday_focus
-		relative_position_id = ULS_develop_docklands
-		prerequisite = { focus = ULS_develop_docklands }
+		id = NIR_end_unemployment_crisis
+		icon = NIR_working_sunday_focus
+		relative_position_id = NIR_develop_docklands
+		prerequisite = { focus = NIR_develop_docklands }
 		mutually_exclusive = {
 		}
 		available = {
@@ -1375,16 +1375,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			remove_ideas = ULS_unemployment_crisis
+			remove_ideas = NIR_unemployment_crisis
 		}
 	}
 	
 	focus = {
-		id = ULS_half_at_war
+		id = NIR_half_at_war
 		icon = GFX_goal_anschluss
-		relative_position_id = ULS_end_unemployment_crisis
+		relative_position_id = NIR_end_unemployment_crisis
 		prerequisite = { 
-			focus = ULS_end_unemployment_crisis
+			focus = NIR_end_unemployment_crisis
 		}
 		
 		bypass = {
@@ -1413,7 +1413,7 @@ focus_tree = {
 		}
 		
 		mutually_exclusive = {
-			focus = ULS_war_commitment
+			focus = NIR_war_commitment
 		}
 
 		cancel_if_invalid = yes
@@ -1425,17 +1425,17 @@ focus_tree = {
 			set_rule = { can_decline_call_to_war = yes }
 			add_autonomy_ratio = {
 				value = 0.2
-				localization = ULS_half_at_war
+				localization = NIR_half_at_war
 			}
 		}
 	}
 	
 	focus = {
-		id = ULS_war_commitment
+		id = NIR_war_commitment
 		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ULS_end_unemployment_crisis
+		relative_position_id = NIR_end_unemployment_crisis
 		prerequisite = { 
-			focus = ULS_end_unemployment_crisis
+			focus = NIR_end_unemployment_crisis
 		}
 		
 		available = {
@@ -1443,7 +1443,7 @@ focus_tree = {
 		}
 		
 		mutually_exclusive = {
-			focus = ULS_half_at_war
+			focus = NIR_half_at_war
 		}
 		
 		bypass = {
@@ -1472,10 +1472,10 @@ focus_tree = {
 			set_rule = { can_decline_call_to_war = no }
 			add_autonomy_ratio = {
 				value = -0.2
-				localization = ULS_war_drive
+				localization = NIR_war_drive
 			}
 			random_owned_controlled_state = {
-				prioritize = { 786 } # derry
+				prioritize = { 789 } # derry
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1496,10 +1496,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_belfast_shipbuilding
+		id = NIR_belfast_shipbuilding
 		icon = GFX_goal_generic_defence
-		relative_position_id = ULS_half_at_war
-		prerequisite = { focus = ULS_war_commitment focus = ULS_half_at_war }
+		relative_position_id = NIR_half_at_war
+		prerequisite = { focus = NIR_war_commitment focus = NIR_half_at_war }
 		mutually_exclusive = {
 		}
 		
@@ -1510,7 +1510,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.1
-				ULS_republican_fanatics_trigger = yes
+				NIR_republican_fanatics_trigger = yes
 			}
 		}
 
@@ -1536,10 +1536,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_belfast_defences
+		id = NIR_belfast_defences
 		icon = GFX_goal_generic_defence
-		relative_position_id = ULS_belfast_shipbuilding
-		prerequisite = { focus = ULS_belfast_shipbuilding }
+		relative_position_id = NIR_belfast_shipbuilding
+		prerequisite = { focus = NIR_belfast_shipbuilding }
 		mutually_exclusive = {
 		}
 		
@@ -1551,7 +1551,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.1
-				ULS_republican_fanatics_trigger = yes
+				NIR_republican_fanatics_trigger = yes
 			}
 		}
 
@@ -1577,10 +1577,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_lisahally_dockyard
+		id = NIR_lisahally_dockyard
 		icon = GFX_goal_generic_defence
-		relative_position_id = ULS_war_commitment
-		prerequisite = { focus = ULS_war_commitment focus = ULS_half_at_war }
+		relative_position_id = NIR_war_commitment
+		prerequisite = { focus = NIR_war_commitment focus = NIR_half_at_war }
 		mutually_exclusive = {
 		}
 		
@@ -1592,7 +1592,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.1
-				ULS_protestant_fanatics_trigger = yes
+				NIR_protestant_fanatics_trigger = yes
 			}
 		}
 
@@ -1601,7 +1601,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			786 = { # derry state
+			789 = { # derry state
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -1618,10 +1618,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_derry_defences
+		id = NIR_derry_defences
 		icon = GFX_goal_generic_defence
-		relative_position_id = ULS_lisahally_dockyard
-		prerequisite = { focus = ULS_lisahally_dockyard }
+		relative_position_id = NIR_lisahally_dockyard
+		prerequisite = { focus = NIR_lisahally_dockyard }
 		mutually_exclusive = {
 		}
 		
@@ -1632,7 +1632,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.1
-				ULS_protestant_fanatics_trigger = yes
+				NIR_protestant_fanatics_trigger = yes
 			}
 		}
 
@@ -1641,7 +1641,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			786 = { # derry state
+			789 = { # derry state
 				add_building_construction = {
 					type = bunker
 					level = 3
@@ -1659,11 +1659,11 @@ focus_tree = {
 	
 	
 	focus = {
-		id = ULS_queens_university
+		id = NIR_queens_university
 		icon = GFX_focus_research
-		relative_position_id = ULS_belfast_defences
-		prerequisite = { focus = ULS_belfast_defences
-		focus = ULS_derry_defences}
+		relative_position_id = NIR_belfast_defences
+		prerequisite = { focus = NIR_belfast_defences
+		focus = NIR_derry_defences}
 		mutually_exclusive = {
 		}
 		
@@ -1684,10 +1684,10 @@ focus_tree = {
 	}
 
 	#focus = {
-	#	id = ULS_working_sunday_focus
+	#	id = NIR_working_sunday_focus
 	#	icon = GFX_goal_generic_support_fascism
-	#	relative_position_id = ULS_secular_state
-	#	prerequisite = { focus = ULS_secular_state }
+	#	relative_position_id = NIR_secular_state
+	#	prerequisite = { focus = NIR_secular_state }
 	#	
 	#	x = 0
 	#	y = 1
@@ -1701,14 +1701,14 @@ focus_tree = {
 	#	available_if_capitulated = no
     #
 	#	completion_reward = {
-	#		add_ideas = ULS_working_sunday_idea
+	#		add_ideas = NIR_working_sunday_idea
 	#	}
 	#}
 	
 	focus = {
-		id = ULS_royal_ulster_constabulary
+		id = NIR_royal_ulster_constabulary
 		icon = GFX_focus_generic_little_entente
-		relative_position_id = ULS_flax_farming
+		relative_position_id = NIR_flax_farming
 		prerequisite = { }
 		mutually_exclusive = {
 		}
@@ -1731,12 +1731,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_ulster_arms
+		id = NIR_ulster_arms
 		icon = GFX_goal_generic_small_arms
-		relative_position_id = ULS_royal_ulster_constabulary
-		prerequisite = { focus = ULS_royal_ulster_constabulary}
+		relative_position_id = NIR_royal_ulster_constabulary
+		prerequisite = { focus = NIR_royal_ulster_constabulary}
 		mutually_exclusive = {
-			focus = ULS_british_arms
+			focus = NIR_british_arms
 		}
 		
 		x = -1
@@ -1754,11 +1754,11 @@ focus_tree = {
 			#research bonus
 			add_autonomy_ratio = {
 				value = -0.2
-				localization = ULS_ulster_arms
+				localization = NIR_ulster_arms
 			}
 			
 			add_tech_bonus = {
-				name = ULS_ulster_arms
+				name = NIR_ulster_arms
 				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
@@ -1767,12 +1767,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_british_arms
+		id = NIR_british_arms
 		icon = GFX_focus_generic_commonwealth_build_infantry
-		relative_position_id = ULS_royal_ulster_constabulary
-		prerequisite = { focus = ULS_royal_ulster_constabulary}
+		relative_position_id = NIR_royal_ulster_constabulary
+		prerequisite = { focus = NIR_royal_ulster_constabulary}
 		mutually_exclusive = {
-			focus = ULS_ulster_arms
+			focus = NIR_ulster_arms
 		}
 		
 		available = {
@@ -1791,7 +1791,7 @@ focus_tree = {
    			factor = 1
    			modifier = {
 				factor = 0.01
-				ULS_republican_fanatics_trigger = yes
+				NIR_republican_fanatics_trigger = yes
 			}
    			modifier = {
 				factor = 0.01
@@ -1800,15 +1800,15 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0.1
-				has_completed_focus = ULS_secular_state
+				has_completed_focus = NIR_secular_state
 			}
 			modifier = {
 				factor = 0.1
-				has_completed_focus = ULS_ulster_third_way
+				has_completed_focus = NIR_ulster_third_way
 			}
 			modifier = {
 				factor = 10
-				has_completed_focus = ULS_british_investors
+				has_completed_focus = NIR_british_investors
 			}
 		}
 
@@ -1819,7 +1819,7 @@ focus_tree = {
 		completion_reward = {
 			add_autonomy_ratio = {
 				value = -0.2
-				localization = ULS_british_arms
+				localization = NIR_british_arms
 			}
 			ENG = {
 				send_equipment = {
@@ -1842,12 +1842,12 @@ focus_tree = {
 
 	
 	focus = {
-		id = ULS_ulster_defence_volunteers
+		id = NIR_ulster_defence_volunteers
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_british_arms
-		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
+		relative_position_id = NIR_british_arms
+		prerequisite = { focus = NIR_british_arms focus = NIR_ulster_arms}
 		mutually_exclusive = {
-			focus = ULS_protestant_conscription
+			focus = NIR_protestant_conscription
 		}
 		
 		bypass = {
@@ -1869,7 +1869,7 @@ focus_tree = {
 				factor = 100
 				## UK tried really hard to stop conscription against the wishes of the Ulster gov
 				overlord = { has_government = democratic }
-				ULS_james_craig_is_gaga_trigger = no
+				NIR_james_craig_is_gaga_trigger = no
 			}
 		}
 
@@ -1883,12 +1883,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_protestant_conscription
+		id = NIR_protestant_conscription
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_british_arms
-		prerequisite = { focus = ULS_british_arms focus = ULS_ulster_arms}
+		relative_position_id = NIR_british_arms
+		prerequisite = { focus = NIR_british_arms focus = NIR_ulster_arms}
 		mutually_exclusive = {
-			focus = ULS_ulster_defence_volunteers
+			focus = NIR_ulster_defence_volunteers
 		}
 		
 		available = {
@@ -1919,7 +1919,7 @@ focus_tree = {
 			}
 			modifier = {
 				# "gaga" James Craig would have really pushed for conscription!
-				ULS_james_craig_is_gaga_trigger = yes
+				NIR_james_craig_is_gaga_trigger = yes
 				factor = 100
 			}
 		}
@@ -1934,10 +1934,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_catholic_conscription
+		id = NIR_catholic_conscription
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_protestant_conscription
-		prerequisite = { focus = ULS_protestant_conscription}
+		relative_position_id = NIR_protestant_conscription
+		prerequisite = { focus = NIR_protestant_conscription}
 		mutually_exclusive = {
 			
 		}
@@ -1964,7 +1964,7 @@ focus_tree = {
 			}
 			modifier = {
 				# "gaga" James Craig would have really pushed for conscription!
-				ULS_james_craig_is_gaga_trigger = yes
+				NIR_james_craig_is_gaga_trigger = yes
 				factor = 100
 			}
 		}
@@ -1974,20 +1974,20 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ULS_catholic_conscription_idea
+			add_ideas = NIR_catholic_conscription_idea
 		}
 	}
 	
 	focus = {
-		id = ULS_reestablish_anglicanism
+		id = NIR_reestablish_anglicanism
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_protestant_state
+		relative_position_id = NIR_protestant_state
 		prerequisite = {
-			focus = ULS_protestant_state
+			focus = NIR_protestant_state
 		}
 		mutually_exclusive = {
-			focus = ULS_establish_presbyterianism
-			focus = ULS_disestablishmentarianism
+			focus = NIR_establish_presbyterianism
+			focus = NIR_disestablishmentarianism
 		}
 		
 		available = {
@@ -2030,15 +2030,15 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_disestablishmentarianism
+		id = NIR_disestablishmentarianism
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_protestant_state
+		relative_position_id = NIR_protestant_state
 		prerequisite = {
-			focus = ULS_protestant_state
+			focus = NIR_protestant_state
 		}
 		mutually_exclusive = {
-			focus = ULS_reestablish_anglicanism
-			focus = ULS_establish_presbyterianism
+			focus = NIR_reestablish_anglicanism
+			focus = NIR_establish_presbyterianism
 		}
 		
 		available = {
@@ -2079,15 +2079,15 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ULS_establish_presbyterianism
+		id = NIR_establish_presbyterianism
 		icon = GFX_goal_generic_support_fascism
-		relative_position_id = ULS_protestant_state
+		relative_position_id = NIR_protestant_state
 		prerequisite = {
-			focus = ULS_protestant_state
+			focus = NIR_protestant_state
 		}
 		mutually_exclusive = {
-			focus = ULS_reestablish_anglicanism
-			focus = ULS_disestablishmentarianism
+			focus = NIR_reestablish_anglicanism
+			focus = NIR_disestablishmentarianism
 		}
 		
 		available = {

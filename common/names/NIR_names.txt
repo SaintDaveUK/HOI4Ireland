@@ -1,4 +1,4 @@
-﻿ULS = {
+﻿NIR = {
 	male = {
 		names = {
 			#Scotland

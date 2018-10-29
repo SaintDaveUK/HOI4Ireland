@@ -10,11 +10,11 @@
 
 opinion_modifiers = {
 
-	ULS_industrial_investment = {
+	NIR_industrial_investment = {
 		value = 25
 	}
 	
-	ULS_foreign_investors = {
+	NIR_foreign_investors = {
 		value = -25
 	}
 }	

@@ -1,0 +1,30 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_idea_NIR_orangeman_1"
+		texturefile = "gfx/interface/ideas/NIR_orangeman_1.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_NIR_orangeman_2"
+		texturefile = "gfx/interface/ideas/NIR_orangeman_2.tga"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_idea_NIR_medium_aircraft_manufacturer"
+		texturefile = "gfx/interface/ideas/NIR_medium_aircraft_manufacturer.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_NIR_industrial_concern"
+		texturefile = "gfx/interface/ideas/NIR_industrial_concern.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_NIR_support_equipment_manufacturer"
+		texturefile = "gfx/interface/ideas/NIR_support_equipment_manufacturer.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_NIR_naval_manufacturer"
+		texturefile = "gfx/interface/ideas/NIR_harland_wolff.tga"
+	}
+}

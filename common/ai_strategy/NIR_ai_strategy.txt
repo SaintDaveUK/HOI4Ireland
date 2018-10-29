@@ -10,11 +10,11 @@
 # protect
 # influence
 
-ULS_loves_IRE = {
+NIR_loves_IRE = {
 	enable = {
-		tag = ULS
+		tag = NIR
 		country_exists = IRE
-		has_completed_focus = ULS_catholic_appeasement
+		has_completed_focus = NIR_catholic_appeasement
 	}
 	abort = {
 		NOT = { country_exists = IRE }
@@ -32,32 +32,32 @@ ULS_loves_IRE = {
 	}	
 }
 
-IRE_loves_ULS = {
+IRE_loves_NIR = {
 	enable = {
 		tag = IRE
-		country_exists = ULS
+		country_exists = NIR
 		
-		ULS = { has_completed_focus = ULS_catholic_appeasement } 
+		NIR = { has_completed_focus = NIR_catholic_appeasement } 
 	}
 	abort = {
-		NOT = { country_exists = ULS }
+		NOT = { country_exists = NIR }
 	}
 	
 	ai_strategy = {
 		type = befriend
-		id = "ULS"			
+		id = "NIR"			
 		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "ULS"			
+		id = "NIR"			
 		value = 100
 	}	
 }
 
-nationalist_ULS_loves_IRE = {
+nationalist_NIR_loves_IRE = {
 	enable = {
-		original_tag = ULS
+		original_tag = NIR
 		has_government = neutrality
 	}
 	abort = {
@@ -76,9 +76,9 @@ nationalist_ULS_loves_IRE = {
 	}	
 }
 
-nationalist_ULS_hates_ENG = {
+nationalist_NIR_hates_ENG = {
 	enable = {
-		original_tag = ULS
+		original_tag = NIR
 		has_government = neutrality
 	}
 	abort = {
@@ -92,11 +92,11 @@ nationalist_ULS_hates_ENG = {
 	}
 }
 
-ULS_hates_IRE = {
+NIR_hates_IRE = {
 	enable = {
-		tag = ULS
+		tag = NIR
 		country_exists = IRE
-		has_completed_focus = ULS_ulster_third_way
+		has_completed_focus = NIR_ulster_third_way
 	}
 	abort = {
 		NOT = { country_exists = IRE }
@@ -109,19 +109,19 @@ ULS_hates_IRE = {
 	}
 }
 
-IRE_hates_ULS = {
+IRE_hates_NIR = {
 	enable = {
 		tag = IRE
-		country_exists = ULS
-		ULS = { has_completed_focus = ULS_ulster_third_way }
+		country_exists = NIR
+		NIR = { has_completed_focus = NIR_ulster_third_way }
 	}
 	abort = {
-		NOT = { country_exists = ULS }
+		NOT = { country_exists = NIR }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = "ULS"			
+		id = "NIR"			
 		value = 200
 	}
 }

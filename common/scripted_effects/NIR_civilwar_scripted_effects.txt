@@ -1,7 +1,7 @@
-#ULS_civilwar_player_neutrality_effect = yes
-ULS_civilwar_player_neutrality_effect = {
-	set_capital = 786
-	start_civil_war = { ideology = neutrality size = 0.6 capital = 786 states = { 786 } }
+#NIR_civilwar_player_neutrality_effect = yes
+NIR_civilwar_player_neutrality_effect = {
+	set_capital = 789
+	start_civil_war = { ideology = neutrality size = 0.6 capital = 789 states = { 789 } }
 	#hidden_effect = { 
 	#	
 	#	
@@ -9,23 +9,23 @@ ULS_civilwar_player_neutrality_effect = {
 	#	#	ruling_party = neutrality
 	#	#	#ideology = democratic
 	#	#	size = 0.5
-	#	#	capital = 786
-	#	#	states = { 786 }
+	#	#	capital = 789
+	#	#	states = { 789 }
 	#	#}
 	#	#random_other_country = {
 	#	#	limit = {
-	#	#		original_tag = ULS
+	#	#		original_tag = NIR
 	#	#		OR = {
 	#	#			has_government = democratic
 	#	#			has_government = fascism
 	#	#		}
 	#	#	}
-	#	#	load_oob = "ULS_civil_war_RUC"
+	#	#	load_oob = "NIR_civil_war_RUC"
 	#	#	set_equipment_fraction = 0.8
 	#	#}
 	#	##news_event = { hours = 6 id = news.262 }
 	#	#
-	#	#load_oob = "ULS_civil_war_IRA"
+	#	#load_oob = "NIR_civil_war_IRA"
 	#	#set_equipment_fraction = 0.8
 	#	#
 	#	##add_popularity = {

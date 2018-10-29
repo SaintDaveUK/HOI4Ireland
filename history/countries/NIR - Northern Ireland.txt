@@ -2,7 +2,7 @@
 
 capital = 119
 
-oob = "ULS_1936"
+oob = "NIR_1936"
 
 set_stability = 1.0
 
@@ -15,28 +15,28 @@ set_technology = {
 	#infantry_weapons1 = 1
 }
 
-ENG = { puppet = ULS }
+ENG = { puppet = NIR }
 
 if = {
 	limit = {
 		has_dlc = "Together for Victory"
 	}
-	ENG = { set_autonomy = { target = ULS autonomy_state = autonomy_integrated_puppet } }
+	ENG = { set_autonomy = { target = NIR autonomy_state = autonomy_integrated_puppet } }
 }
-ENG = { remove_from_faction = ULS } 
+ENG = { remove_from_faction = NIR } 
 
-set_cosmetic_tag = ULS_uk
+set_cosmetic_tag = NIR_uk
 
 
 
 add_opinion_modifier = { target = IRE modifier = hostile_status }
-IRE = { add_opinion_modifier = { target = ULS modifier = hostile_status } }
+IRE = { add_opinion_modifier = { target = NIR modifier = hostile_status } }
 
 ### national spirit
 add_ideas = {
-	ULS_religious_sectarianism
-	ULS_old_guard
-	ULS_unemployment_crisis
+	NIR_religious_sectarianism
+	NIR_old_guard
+	NIR_unemployment_crisis
 	disarmed_nation
 }
 ###ministers
@@ -91,7 +91,7 @@ create_country_leader = { #uup
 	}
 }
 
-##remaining Democratic leaders are defined in ULS_scripted_effects.txt
+##remaining Democratic leaders are defined in NIR_scripted_effects.txt
 
 
 
@@ -100,7 +100,7 @@ create_country_leader = { #nationalist party
 	desc = "THOMAS_JOSEPH_CAMPBELL_DESC"
 	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 	expire = "1965.1.1"
-	ideology = ULS_irish_republicanism
+	ideology = NIR_irish_republicanism
 	traits = {
 	}
 }
@@ -120,7 +120,7 @@ create_country_leader = { #protestant league
 	desc = "JAMES_HANNA_MCCORMICK"
 	picture = "Portrait_Ulster_McCormick.tga"
 	expire = "1965.1.1"
-	ideology = ULS_anti_catholicism
+	ideology = NIR_anti_catholicism
 	traits = {
 		great_war_hero
 	}

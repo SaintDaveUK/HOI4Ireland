@@ -1,0 +1,43 @@
+﻿l_english:
+ NIR_stormont_parliament:0 "Stormont Parliament"
+ NIR_stormont_parliament_desc:0 "The Parliament of Northern Ireland was created in 1920 following the Irish War of Independence."
+ 
+ NIR_secular_state:0 "Secular State"
+ NIR_secular_state_desc:0 "The government must adjust its current trajectory if it is to ever to be considered truly legitmate by the Catholic minorities in the province."
+ 
+ NIR_protestant_state:0 "Protestant State"
+ NIR_protestant_state_desc:0 "It is the government's duty to defend the Protestants of Ulster from the revolutionary Catholics to the south."
+ 
+ NIR_gerrymandering:0 "Gerrymandering"
+ NIR_gerrymandering_desc:0 "By adjusting the boundaries of troublesome election constituencies, we can ensure that the Loyalist majority always get the majority vote - as is their democratic right."
+ 
+ NIR_ulster_third_way:0 "Ulster Third Way"
+ NIR_ulster_third_way_desc:0 "Britain has promised much to our young state, but delivered so little. It's cowardly government commits few resources to our cause while weakening our hand at every step. We must take powers into our own hands if our Protestant and Ulster-Scots nation is to survive in the new world."
+ 
+ NIR_for_god_and_ulster:0 "For God and Ulster"
+ NIR_for_god_and_ulster_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+ 
+ NIR_kingdom_of_ireland:0 "Kingdom of Ireland"
+ NIR_kingdom_of_ireland_desc:0 "Our nation is the true successor state to the old Irish state. We must sieze what is ours to ensure Ireland is once again guided by the benevolent rule of a Protestant Ascendancy."
+ 
+  NIR_royal_ulster_constabulary:0 "Royal Ulster Constabulary"
+ NIR_royal_ulster_constabulary_desc:0 "Though we do not control any army of our own, our police force is sufficiently militarised to act as one."
+ 
+  NIR_lisahally_dockyard:0 "Lisahally Dockyard"
+ NIR_lisahally_dockyard_desc:0 "Being the most northerly port in Ireland, the smooth operation of Lisahally is of vital strategic importance."
+ 
+  NIR_ulster_arms:0 "Domestic Arms"
+#NIR_ulster_arms_desc:0 "Being the most northerly port in Ireland, the smooth operation of Lisahally is of vital strategic importance."
+
+  NIR_british_arms:0 "British Imports"
+#NIR_british_arms:0 "Being the most northerly port in Ireland, the smooth operation of Lisahally is of vital strategic importance."
+
+ NIR_german_investors:0 "German Investors"
+ #NIR_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+ NIR_irish_investors:0 "Irish Investors"
+ #NIR_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+ NIR_british_investors:0 "British Investors"
+ #NIR_german_investors_desc:0 "The remaining counties in the Province of Ulster belong to our people."
+
+ NIR_stand_by_britain:0 "Stand By Britain"
+ NIR_stand_by_britain_desc:0 "Ulster is the key to the defence of Ireland. To make it neutral would mean handing over that key to Hitler. A neutral Ulster is impossible. We mean to stand by Britain and the empire!"

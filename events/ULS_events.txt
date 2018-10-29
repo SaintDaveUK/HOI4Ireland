@@ -1,4 +1,4 @@
-﻿## ULSTER EVENTS ##
+﻿## NIRTER EVENTS ##
 ## Written by SaintDaveUK ##
 
 #10 Ulster peacefully joining Ireland
@@ -43,7 +43,7 @@ news_event = {
 	
 	option = {
 		name = "Interesting."
-		annex_country = { target = ULS transfer_troops = yes }
+		annex_country = { target = NIR transfer_troops = yes }
 	}
 }
 ##########################################
@@ -55,14 +55,14 @@ country_event = {
 	id = ulster.19
 	title = ulster.19.t
 	desc = ulster.19.d
-	picture = report_event_ULS_james_craig_radio
+	picture = report_event_NIR_james_craig_radio
 	
 	major = yes
 	
 	trigger = {
-		tag = ULS
+		tag = NIR
 		has_government = democratic
-		NOT = { has_country_flag = ULS_james_craig_dead }
+		NOT = { has_country_flag = NIR_james_craig_dead }
 		#date > 1938.1.1
 		
 		has_country_leader = { ruling_only = yes id = 99941 }
@@ -96,16 +96,16 @@ country_event = {
 	id = ulster.20
 	title = ulster.20.t
 	desc = ulster.20.d
-	picture = news_event_ULS_james_craig_funeral
+	picture = news_event_NIR_james_craig_funeral
 
 	major = yes
 	
 	fire_only_once = yes
 
 	trigger = {
-		tag = ULS
+		tag = NIR
 		has_government = democratic
-		NOT = { has_country_flag = ULS_james_craig_dead }
+		NOT = { has_country_flag = NIR_james_craig_dead }
 		#date > 1938.1.1
 		
 		has_country_leader = { ruling_only = yes id = 99941 }
@@ -120,7 +120,7 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = ULS_james_craig_dead
+		set_country_flag = NIR_james_craig_dead
 		
 	}
 
@@ -131,9 +131,9 @@ country_event = {
 		
 		ai_chance = { factor = 100 }
 		
-		ULS_elect_andrews_effect = yes
+		NIR_elect_andrews_effect = yes
 		
-		set_country_flag = ULS_andrews_is_democratic_leader
+		set_country_flag = NIR_andrews_is_democratic_leader
 		
 		hidden_effect = { news_event = { id = ulster.21 hours = 12 } }
 	}
@@ -144,7 +144,7 @@ news_event = {
 	id = ulster.21
 	title =  ulster.21.t
 	desc = ulster.21.d
-	picture = news_event_ULS_james_craig_funeral
+	picture = news_event_NIR_james_craig_funeral
 	
 	#major = yes
 		
@@ -164,7 +164,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		tag = ULS
+		tag = NIR
 		has_government = democratic
 		has_country_leader = { ruling_only = yes id = 99942 }
 	}	
@@ -194,8 +194,8 @@ country_event = {
 		name = ulster.23.b
 		
 		retire_country_leader = yes
-		ULS_elect_brooke_effect = yes
-		remove_ideas = ULS_old_guard
+		NIR_elect_brooke_effect = yes
+		remove_ideas = NIR_old_guard
 		
 		add_stability = 0.1
 		add_popularity = { ideology = fascism popularity = -0.1 } 
@@ -227,7 +227,7 @@ country_event = {
 	id = ulster.100
 	title =  ulster.100.t
 	desc = ulster.100.d
-	picture = news_event_ULS_james_craig_radio
+	picture = news_event_NIR_james_craig_radio
 	
 	major = yes
 		
@@ -243,7 +243,7 @@ country_event = {
 	id = ulster.101
 	title =  ulster.101.t
 	desc = ulster.101.d
-	picture = news_event_ULS_james_craig_radio
+	picture = news_event_NIR_james_craig_radio
 	
 	major = yes
 		
@@ -259,7 +259,7 @@ country_event = {
 	id = ulster.102
 	title =  ulster.102.t
 	desc = ulster.102.d
-	picture = report_event_ULS_unionists
+	picture = report_event_NIR_unionists
 	
 	major = yes
 		
@@ -304,17 +304,17 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = ulster.170.ULS #Protestant - yes please
+		name = ulster.170.NIR #Protestant - yes please
 		trigger = {
-			tag = ULS
+			tag = NIR
 		}
 	}
 	
 	option = {
 		name = ulster.170.a #Protestant - yes please
 		trigger = {
-			NOT = { tag = ULS }
-			ULS_protestant_trigger = yes
+			NOT = { tag = NIR }
+			NIR_protestant_trigger = yes
 		}
 		ai_chance = {
 			base = 1
@@ -335,7 +335,7 @@ news_event = {
 			}
 			modifier = { # unlikely to join if already safe
 				factor = 10
-				has_government = ULS
+				has_government = NIR
 			}
 			
 			
@@ -343,21 +343,21 @@ news_event = {
 			modifier = { 
 				factor = 2
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value > 0
 				}
 			}
 			modifier = { 
 				factor = 2
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value > 50
 				}
 			}
 			modifier = { 
 				factor = 10
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value > 90
 				}
 			}
@@ -369,33 +369,33 @@ news_event = {
 			modifier = { 
 				factor = 0.5
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value < 0
 				}
 			}
 			modifier = { 
 				factor = 0.5
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value < -50
 				}
 			}
 			modifier = { 
 				factor = 0
 				has_opinion = {
-					target = ULS
+					target = NIR
 					value < -90
 				}
 			}
 		}
 		
-		ULS = {
+		NIR = {
 			add_to_faction = ROOT
 		}
 		ROOT = {
 			add_ai_strategy = {
 				type = alliance
-				id = "ULS"
+				id = "NIR"
 				value = 200
 			}
 		}
@@ -403,8 +403,8 @@ news_event = {
 	option = {
 		name = ulster.170.b #Protestant - no thanks
 		trigger = {
-			NOT = { tag = ULS }
-			ULS_protestant_trigger = yes
+			NOT = { tag = NIR }
+			NIR_protestant_trigger = yes
 		}
 		ai_chance = {
 			base = 1
@@ -412,14 +412,14 @@ news_event = {
 			
 		}
 		
-		ULS = {
+		NIR = {
 			add_to_faction = ROOT
 			add_opinion_modifier = { target = ROOT modifier = refused_alliance }
 		}
 		ROOT = {
 			add_ai_strategy = {
 				type = alliance
-				id = "ULS"
+				id = "NIR"
 				value = 200
 			}
 		}
@@ -427,8 +427,8 @@ news_event = {
 	option = {
 		name = ulster.170.c #everyone else
 		trigger = {
-			NOT = { tag = ULS }
-			ULS_protestant_trigger = no
+			NOT = { tag = NIR }
+			NIR_protestant_trigger = no
 		}
 	}
 }
@@ -440,7 +440,7 @@ country_event = {
 	id = ulster.199
 	title =  ulster.199.t
 	desc = ulster.199.d
-	picture = report_event_ULS_unionists
+	picture = report_event_NIR_unionists
 	
 	is_triggered_only = yes
 	
@@ -456,7 +456,7 @@ country_event = {
 	id = ulster.200
 	title =  ulster.200.t
 	desc = ulster.200.d
-	picture = report_event_ULS_orange_parade
+	picture = report_event_NIR_orange_parade
 	
 	#major = yes
 		
@@ -464,7 +464,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			add_timed_idea = { idea = ULS_marching_season days = 11 }	
+			add_timed_idea = { idea = NIR_marching_season days = 11 }	
 			country_event = { id = ulster.200 days = 365 }
 			
 			random_list = {
@@ -483,7 +483,7 @@ country_event = {
 		name = "Interesting."
 		
 		effect_tooltip = {
-			add_timed_idea = { idea = ULS_marching_season days = 11 }	
+			add_timed_idea = { idea = NIR_marching_season days = 11 }	
 		}
 	}
 }
@@ -522,7 +522,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.5
 				only_own_territory = no
-				capital = 786
+				capital = 789
 				states = all
 				states_filter = {
 					is_core_of = IRE
@@ -553,7 +553,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			set_capital = 786
+			set_capital = 789
 			start_civil_war = {
 				#ruling_party = fascism
 				ideology = fascism
@@ -562,7 +562,7 @@ country_event = {
 				capital = 119
 				states = all
 				states_filter = {
-					is_core_of = ULS
+					is_core_of = NIR
 				}
 			}
 		}
@@ -589,14 +589,14 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			add_timed_idea = { idea = ULS_marching_season_riots days = 11 }	
+			add_timed_idea = { idea = NIR_marching_season_riots days = 11 }	
 		}
 	}
 	
 	option = {
 		name = "Oh dear."
 		effect_tooltip = {
-			add_timed_idea = { idea = ULS_marching_season_riots days = 11 }	
+			add_timed_idea = { idea = NIR_marching_season_riots days = 11 }	
 		}
 	}
 }

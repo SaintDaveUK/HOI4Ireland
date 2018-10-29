@@ -249,19 +249,19 @@ bookmarks = {
 			}
 		}
 		
-		"ULS"={
+		"NIR"={
 			minor = yes
-			history = "ULS_GATHERING_STORM_DESC"
+			history = "NIR_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				ULS_religious_sectarianism
-				ULS_old_guard
+				NIR_religious_sectarianism
+				NIR_old_guard
 				
 			}
 			focuses = {
-				ULS_british_heritage
-				ULS_united_ireland
-				ULS_ulster_third_way
+				NIR_british_heritage
+				NIR_united_ireland
+				NIR_ulster_third_way
 			}
 		}
 

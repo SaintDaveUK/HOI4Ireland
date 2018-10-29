@@ -1,18 +1,18 @@
-﻿ULS_ruc = 
+﻿NIR_ruc = 
 {
 	name = "Royal Ulster Constabulary"
 
-	for_countries = { ULS }
+	for_countries = { NIR }
 
 	can_use = {
-		ULS_republican_trigger = no
-		NOT = { has_cosmetic_tag = ULS_koi}
+		NIR_republican_trigger = no
+		NOT = { has_cosmetic_tag = NIR_koi}
 	}
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { ULS_ric ULS_uvf }
+	link_numbering_with = { NIR_ric NIR_uvf }
 
 	fallback_name = "%d Division"
 
@@ -55,21 +55,21 @@
 	}
 }
 
-ULS_ric = 
+NIR_ric = 
 {
 	name = "Royal Irish Constabulary"
 
-	for_countries = { ULS }
+	for_countries = { NIR }
 
 	can_use = {
-		ULS_republican_trigger = no
-		has_cosmetic_tag = ULS_koi
+		NIR_republican_trigger = no
+		has_cosmetic_tag = NIR_koi
 	}
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { ULS_ruc ULS_uvf }
+	link_numbering_with = { NIR_ruc NIR_uvf }
 
 	fallback_name = "%d Division"
 
@@ -112,20 +112,20 @@ ULS_ric =
 	}
 }
 
-ULS_uvf = 
+NIR_uvf = 
 {
 	name = "Home Guard"
 
-	for_countries = { ULS }
+	for_countries = { NIR }
 
 	can_use = {
-		has_completed_focus = ULS_ulster_defence_volunteers 
+		has_completed_focus = NIR_ulster_defence_volunteers 
 	}
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { ULS_ric ULS_ruc }
+	link_numbering_with = { NIR_ric NIR_ruc }
 
 	fallback_name = "No. %d Home Guard"
 
@@ -168,21 +168,21 @@ ULS_uvf =
 	}
 }
 
-ULS_ira = 
+NIR_ira = 
 {
 	name = "Irish Republican Army"
 
-	for_countries = { ULS }
+	for_countries = { NIR }
 
 	can_use = {
-		ULS_republican_trigger = yes
-		NOT = { has_cosmetic_tag = ULS_koi}
+		NIR_republican_trigger = yes
+		NOT = { has_cosmetic_tag = NIR_koi}
 	}
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { ULS_ric }
+	#link_numbering_with = { NIR_ric }
 
 	fallback_name = "No %d IRA Northern Command"
 }
